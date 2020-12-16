@@ -3,9 +3,8 @@
 }
 .media{
     display:flex;
-    justify-content: flex-start;
     background-color:beige;
-    padding:1%;   
+    padding:1%;
 }
 .media-body{
     padding:1%;

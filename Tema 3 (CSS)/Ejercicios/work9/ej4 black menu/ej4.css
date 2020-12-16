@@ -3,14 +3,14 @@
 }
 body{
     background-color:lightgray;
-    font-size:1.2rem;
+    font-size:1.1rem;
     margin:0;
 }
 
 /*Menu*/
 
 nav{
-    margin-top:10%;
+    margin-top:8%;
     background-color:rgba(0, 0, 0, 0.774);
 }
 nav a{
@@ -30,8 +30,8 @@ nav ul{
 }
 nav ul li{
     list-style:none;
-    padding:5%;
-    width:82%;
+    padding:4%;
+    width:100%;
     text-align:center;
     border-top:1px solid lightgray;
     border-bottom:1px solid lightgray;
@@ -48,11 +48,11 @@ article h1,article p{
 article p{
     margin:0 2% 0;
     padding:0 3% 3%;
-    font-size:1.3rem;
+    font-size:1.2rem;
     border-bottom:1px solid gray;
 }
 .promo{
-    padding:25% 20% 2%;
+    padding:18% 20% 2%;
     border-bottom:1px solid gray;
 }
 footer{
@@ -60,17 +60,20 @@ footer{
 }
 
 @media screen and (min-width:568px){
-    body{
-        font-size:1.1rem;
+    nav{
+        margin-top:7%;
+        display:flex;
+        justify-content:center;
     }
     nav ul{
         flex-direction:row;
         justify-content:center;
+        width:85%;
     }
     nav ul li{
         padding:2%;
         border:0;
-        width:17%;
+        width:auto;
     }
     nav a{
         padding:15% 0;
@@ -79,9 +82,8 @@ footer{
         margin:2.5% auto;
     }
     article p{
-        font-size:1.3rem;
         border:0;
-        padding:0 4%;
+        padding:0 3%;
     }
     .promo_container{
         display:flex;
@@ -89,10 +91,10 @@ footer{
     }
     .promo{
         width:16%;
-        padding:13% 0 9%;
+        padding:10% 0 9%;
         border:0;
     }
     footer{
-        padding:2.5%;
+        padding:3% 2.5%;
     }
 }

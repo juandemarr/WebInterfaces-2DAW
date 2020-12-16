@@ -1,0 +1,64 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+main{
+    display:flex;
+    flex-direction:column;
+}
+header,article,nav,aside,footer{
+    height:20vh;
+    padding:4%;
+}
+header,footer{
+    background-color:yellowgreen;
+}
+article{
+    order:2;/*Hay que dárselo a todos los hijos*/
+}
+nav{
+    order:1;
+    background-color:lightgoldenrodyellow;
+}
+aside{
+    order:3;
+    background-color:lightgoldenrodyellow;
+}
+
+@media screen and (min-width:568px){
+    main{
+        flex-direction:row;
+    }
+    aside{
+        display:none;
+    }
+    article{
+        flex-grow:5;/*alternativa a poner un width calculado. Se pone a los hijos flex*/
+        order:1;
+        height:60vh;
+    }
+    nav{
+        flex-grow:1;
+        order:2;
+        height:60vh;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    aside{
+        display:initial;
+        height:60vh;
+        order:3;
+        background-color:paleturquoise;
+        flex-grow:1;/*width:20%;*/
+    }
+    nav{
+        order:1;
+        flex-grow:1;/*width:20%;*/
+    }
+    article{
+        order:2;
+        flex-grow:5;/*width:60%;*/
+    }
+}
