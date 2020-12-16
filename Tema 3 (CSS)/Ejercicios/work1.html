@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding:3%;
+            font-family: sans-serif;
+        }
+        h1{
+            margin-top:-1%;
+        }
+        .femenino{
+            color:blue;
+        }
+        .masculino{
+            color:red;
+        }
+        #middlemarch li:first-child,#taletwocities li:nth-child(2){
+            font-weight: bold;
+        }
+        li:nth-child(5){
+            font-style: italic;
+        }
+        #middlemarch{
+            list-style-type: upper-roman;
+            letter-spacing:.3em;
+            
+        }
+        ol#middlemarch{
+            margin-left:5%;
+        }
+        #taletwocities{
+            list-style-type:lower-greek;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Los caracteres femeninos están en texto azul, y los caracteres masculinos son rojos     X
+Dorothea Brooke y Sydney Carton son texto en negrita    X
+Joshua Rigg y Madame Defarge están en cursiva   X
+La lista para Middlemarch se enumera con números romanos    X
+La lista de Historia de dos ciudades se enumera con caracteres alfa.    X
+Los elementos de la lista para Middlemarch están más espaciados.    X  
+La lista para Middlemarch se ha movido a la derecha.    X
+La fuente serif no se usa en ninguna parte de la página     X
+-->
+<h1>Characters</h1>
+    <h2>Middlemarch</h2>
+    <h3>George Eliot</h3>
+    <ol id="middlemarch">
+        <li class="femenino">Dorothea Brooke</li>
+        <li class="femenino">Celia Brooke</li>
+        <li class="masculino">Edward Casaubon</li>
+        <li class="masculino">Sir James Chettam</li>
+        <li class="masculino">Joshua Rigg</li>
+        <li class="masculino">Will Ladislaw</li>
+        <li class="masculino">Tertius Lydgate</li>
+        <li class="masculino">Rosamond Vincy</li>
+    </ol>
+    <h2>A Tale of Two Cities</h2>
+    <h3>Charles Dickens</h3>
+    <ol id="taletwocities">
+        <li class="masculino">Charels Danay</li>
+        <li class="femenino">Sydney Carton</li>
+        <li class="masculino">Doctor Manette</li>
+        <li class="femenino">Lucie Mantte</li>
+        <li class="femenino">Madame Defarge</li>
+        <li class="femenino">Miss Pross</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,57 @@
+*{
+    box-sizing:border-box;
+}
+nav{
+    display:flex;
+    flex-direction:column-reverse;
+    background-color:goldenrod;
+    padding:3%;
+}
+nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    padding-bottom:5%;
+}
+nav li{
+    padding:3%;
+    text-align:center;
+}
+nav li a{
+    text-decoration:none;
+    color:white;
+    padding:3% 30%;
+}
+nav form{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+}
+div{
+    display:flex;
+    width:100%;
+}
+#elementos{
+    justify-content:space-around;
+}
+input[type="search"]{
+    width:87%;
+}
+input[type="submit"]{
+    width:12%;
+    border-radius:15px;
+    background-color:linen;
+    padding:0.2% 1%;
+    border:1px solid goldenrod;
+    color:goldenrod;
+}
+nav li a:visited{
+    color:white;
+}
+
+@media screen and (min-width:568px){
+    nav{
+        /* flex-direction:unset; */
+    }
+}

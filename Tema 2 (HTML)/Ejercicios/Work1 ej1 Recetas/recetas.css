@@ -1,0 +1,117 @@
+@keyframes tituloMov{
+    0% {top:-100px;color:#e64a02;}
+    50%{font-size:2.5em;}
+    100%{top:0px;}
+}
+@font-face{/*fuente descargada*/
+    font-family:'Raleway', sans-serif;
+    src:url("fonts/Raleway-Regular.ttf");
+}
+
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:3%;
+    font-family:'Raleway', sans-serif;
+    letter-spacing:0.7px;
+    background-color:#cadee9;
+    line-height:2em;
+    font-size:1.1em;
+    margin-bottom:4%;
+}
+
+/*Introducción*/
+
+.intro{
+    width:40%;
+    overflow:hidden;
+    margin:0 0 3% 28%;
+}
+.intro ul li:first-child{
+    float:left;
+}
+.intro ul li:nth-child(2){
+    float:right;
+}
+.intro ul li{
+    display:inline;
+}
+
+/*Título e imagen*/
+
+.titulo{
+    display:flex;
+    overflow:hidden;
+}
+#tenis .titulo h2{
+    margin-left:15%;
+}
+img{
+    width:30%;
+}
+#zongzi .titulo h2{
+    margin-left:43%;
+}
+#zongzi .titulo img{
+    margin-left:14%;
+}
+
+/*Las dos recetas*/
+
+#tenis,#zongzi{
+    box-shadow:2px 2px 8px 2px #128bcc;
+    width:65%;
+    margin:0 0 3% 17%;
+    background-color:#dbebf3;
+    padding:3%;
+}
+
+/*2ª receta*/
+
+#zongzi #pasos{
+    width:60%;
+    margin-left:20%;
+    height:500px;
+    margin-top:5%;
+}
+
+/*Títulos*/
+
+h1,h2,h3{
+    text-align:center;
+    font-variant:small-caps;
+    margin-bottom:3%;
+}
+h1{
+    font-size:1.8em;
+    animation:tituloMov 2.2s;
+    position:relative;
+}
+h2,h3{
+    margin-top:6%;
+}
+.negrita{
+    font-weight:bold;
+}
+
+/*Enalces*/
+a{
+    text-decoration-style:double;
+    color:#e64a02;
+    font-weight: bold;
+}
+a:visited{
+    color:#128bcc;
+}
+
+/*Footer*/
+
+footer{
+    margin-top:2%;
+}
+footer p{
+    float:right;
+    font-size:.9em;
+    opacity:.6;
+}

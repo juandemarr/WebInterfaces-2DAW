@@ -1,0 +1,22 @@
+/*Crea las reglas necesarias en el siguiente pen para que
+el fondo de la página sea gris claro
+Crea una clase para que el primer párrafo se visualizará en columnas equilibradas con un ancho 7 veces 
+el de la fuente actual
+Crea una clase en la que el segundo párrafo estará formado por tres columnas, con un ancho de columna 
+3 veces el de la fuente actual y una línea de separación entre columnas roja punteada.
+Modifica la segunda clase para que el ancho de columna sea 8 veces la fuente actual.
+*/
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:#CACACA;
+}
+.primero{
+    column-width:7em;
+}
+.segundo{
+    column-count:3;
+    column-rule-style: dotted;
+    column-rule-color: red;
+}

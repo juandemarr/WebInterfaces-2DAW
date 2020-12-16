@@ -1,0 +1,24 @@
+@media screen and (max-device-width:1060px){
+    #main{
+        width:65%!important;
+    }
+    input{
+        width:40%;
+    }
+}
+@media screen and (max-device-width:768px){
+    #main{
+        width:95%!important;
+    }
+}
+@media screen and (max-device-width:510px){
+    body{
+        letter-spacing:1px!important;
+    }
+    input{
+        display:block;
+        margin-left:0!important;
+        margin:2% 0!important;
+        width:65%;
+    }
+}

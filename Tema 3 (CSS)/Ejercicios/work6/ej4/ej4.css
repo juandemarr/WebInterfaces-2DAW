@@ -1,0 +1,14 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center;   
+}
+div{
+    margin:50px;
+    width:400px;
+    height:200px;
+    background-image:linear-gradient(to bottom left, red, white, blue);
+    border:1px solid dimgray;
+}

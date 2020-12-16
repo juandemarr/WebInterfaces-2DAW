@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work3 ej5</title>
+    <link rel="stylesheet" type="text/css" href="ej5MediaQueries.css"/>
+    <link rel="stylesheet" type="text/css" href="ej5.css"/>
+</head>
+<body>
+    <h1>Formulario de prueba de HTML 5</h1>
+    <section id="main">
+        <form action="" method="GET">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" autofocus/>
+            <br>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email"/>
+            <br>
+            <label for="url">Página web personal: </label>
+            <input type="url" id="url" palceholder="Escribe la URL de tu página web personal"/>
+            <br>
+            <label for="date">Fecha: </label>
+            <input type="date" id="date"/>
+            <br>
+            <label for="week">Semana: </label>
+            <input type="week" id="week"/>
+            <br>
+            <label for="numero">Número: </label>
+            <input type="number" id="numero" min="-10" max="10"/>
+            <br>
+            <label for="tel">Teléfono: </label>
+            <input type="tel" id="tel"/>
+            <br>
+            <label for="search">Búsqueda: </label>
+            <input type="search" id="search"/>
+            <br>
+            <label for="color">Color: </label>
+            <input type="color" id="color"/>
+            <br>
+            <label for="time">Hora: </label>
+            <input type="time" id="time"/>
+            <br>
+            <label for="datetime">Fecha y hora: </label>
+            <input type="datetime-local" id="datetime"/>
+            <br>
+            <label for="month">Mes: </label>
+            <input type="month" id="month"/>
+            <br>
+            <label for="datalist">Elige: </label>
+            <input list="lista" name="elementoLista" id="datalist">
+                <datalist id="lista">
+                    <option value="High ground">
+                    <option value="Low ground">
+                </datalist>
+            <br>
+            <div class="botonera">
+                <input type="submit"/>
+                <input type="reset" value="Borrar"/>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

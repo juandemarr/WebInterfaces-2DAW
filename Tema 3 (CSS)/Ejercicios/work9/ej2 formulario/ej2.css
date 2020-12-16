@@ -1,0 +1,86 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:lightgoldenrodyellow;
+    width:65%;
+    margin:auto;
+    padding:2%;
+}
+.row{
+    display:flex;
+    justify-content:space-around;
+}
+.row:nth-child(2){
+    margin-top:2%;
+}
+.row .column:first-child{
+    width:55%;
+}
+.row .column:last-child{
+    width:38%;
+}
+.input-group{
+    display:flex;
+    justify-content:space-between;
+}
+
+/*Inputs*/
+
+input,select{
+    padding:1%;
+    margin-bottom:3%;
+}
+#nombre_cliente{
+    width:81%;
+}
+#telefono{
+    width:80%;
+}
+#email{
+    width:85%;
+}
+#dia_recogida{
+    width:50%;
+}
+#lugar_recogida{
+    width:70%;
+}
+#destino{
+    width:82%;
+}
+
+/*2 row*/
+
+fieldset{
+    border:0;
+}
+.taxi label,.extras label{
+    display:block;
+}
+
+/*Boton*/
+
+#submit{
+    padding:1%;
+    background-color:grey;
+    color:white;
+    border:1px solid grey;
+}
+#submit:hover{
+    transition:.4s ease-out;
+    background-color:white;
+    color:grey;
+}
+
+@media screen and (max-device-width:568px){
+    body{
+        width:100%;
+    }
+    .row{
+        display:block;
+    }
+    .row .column{
+        width:100%!important;
+    }
+}

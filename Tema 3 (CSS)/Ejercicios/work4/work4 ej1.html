@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;/*el padding y border se incluye dentro de la anchura del contenedor*/
+        }
+        #first{
+          background-color: blue;
+          width: 250px;
+          height: 100px;
+          padding:2%;
+          /*estas 3 propiedades de border son necesarias para el borde gradiente*/
+          border:10px solid orange;
+          border-image-source:linear-gradient(to right, red, purple);
+          border-image-slice:1;
+          /************/
+         }
+        #second{
+         border: 5px solid red;
+         width: 50px;
+         height: 200px;
+         margin-left:7%;
+         }
+    </style>
+</head>
+<body>
+    <div id="first"></div>
+    <div id="second"></div>
+</body>
+</html>

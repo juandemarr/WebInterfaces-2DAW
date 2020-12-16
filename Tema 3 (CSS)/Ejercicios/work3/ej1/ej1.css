@@ -1,0 +1,22 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:2%;
+}
+table{
+    border-collapse:collapse;
+    border:2px solid black;
+}
+td,th{
+    width:260px;
+    height:60px;
+    border:2px solid black;
+}
+
+tr:first-child{
+    background-color:#505050;
+}
+tr{
+    background-color:#CACACA;
+}

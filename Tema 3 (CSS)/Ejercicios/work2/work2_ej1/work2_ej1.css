@@ -1,0 +1,49 @@
+/*
+Crea una página web y vincúlale una hoja de estilos que contenga lo siguiente:
+
+    • El cuerpo del documento debe usar fuente Verdana 10pt, color negro. El color de fondo debe ser 
+    gris.
+
+Además crea elementos de tres clases diferentes:
+
+    • .naranja: el texto será naranja con fondo azul. Aplícalo a párrafos.
+    • .consola: texto verde, fuente Courier, fondo negro. Aplícalo a párrafos.
+    • .importante: se aplica a enlaces. Hace que los enlaces no tengan subrayado y que cuando
+     el ratón se coloca encima les cambia el fondo a amarillo.
+
+Crea también un elemento id #título para aplicarlo a una etiqueta <h1>, 
+para que use fuente Verdana tamaño 40pt
+y color gris oscuro*/
+
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:2%;
+    font-family:Verdana;
+    font-size:10pt;
+    color:black;
+    background-color:#CACACA;
+}
+.naranja{
+    color:orange;
+    background-color:blue;
+}
+.consola{
+    color:lightgreen;
+    font-family:Courier;
+    background-color:black;
+}
+.importante{
+    text-decoration:none;
+}
+.importante:hover{
+    background-color:yellow;
+    transition:.3s ease-out;
+}
+#titulo{
+    font-family:verdana;
+    font-size:40pt;
+    color:#6e6e6e;
+    font-variant:small-caps;
+}

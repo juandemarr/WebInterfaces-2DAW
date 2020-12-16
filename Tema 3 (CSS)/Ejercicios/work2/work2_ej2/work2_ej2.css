@@ -1,0 +1,43 @@
+/*Dado el siguiente código HTML, escribe las reglas CSS necesarias para:
+
+la lista aparezca sin viñeta
+relleno de la lista 0px
+relleno cada elemento 3px
+margen inferior de cada elemento 5px
+usa pseudo clases para
+	añadir franjas tipo cebra a cada enlace de la lista. Usa colores gris claro.
+	Dar estilo a los enlaces cuando son activados: Ejemplo: color letra rojo
+*/
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:2%;
+    display:flex;
+    justify-content:space-around;
+}
+ul{
+    list-style-type:none;
+    padding:0;
+    width:30%;
+}
+li{
+    padding:3px;
+    margin-bottom:5px;
+}
+li:nth-child(even){
+    background-color:#888888;
+}
+li:nth-child(odd){
+    background-color:#CACACA;
+}
+a:link{
+    color:green;
+}
+a:active{
+    color:red!important;
+}
+a:visited{
+    color:orange;
+}
+

@@ -1,0 +1,29 @@
+/*•	los elementos de la lista deben aparecer al menos 20 píxeles desde el borde izquierdo de la página
+•	los elementos de la lista estarán separados al menos10 píxeles entre sí
+•	centrar el encabezado
+•	mantener la lista al menos 50 píxeles del encabezado
+•	los títulos de los libros en la lista no deben mostrarse en una fuente serif
+•	el encabezado debe usar una fuente diferente a la lista
+•	el texto del encabezado debe ser rojo oscuro
+•	rompe las reglas CSS en dos archivos .css diferentes. Un archivo debe contener las reglas de espaciado,
+ el otro las reglas que rigen las caras de las fuentes o los colores. Enlazar ambos en tu documento HTML
+•	En lugar de números, haz que los elementos de la lista estén indexados por el alfabetouna
+•	cambie la etiqueta <ol> a <ul> (y el cierre </ol> a </ul>) y aplique un estilo a los elementos de la 
+lista para que tengan puntos de viñeta cuadrada
+•	descarga una forma simple y diseña los elementos de la lista para usarla
+*/
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:2%;
+}
+li{
+    margin-left:20px;
+    margin-bottom:10px;
+}
+h1{
+    text-align:center;
+}
+ol{
+    margin-top:50px;
+}

@@ -1,0 +1,15 @@
+*{
+    box-sizing:border-box;
+}
+.media{
+    display:flex;
+    justify-content: flex-start;
+    background-color:beige;
+    padding:1%;   
+}
+.media-body{
+    padding:1%;
+}
+.media:nth-of-type(2){/*.media:lastchild , .media:nth-last-child(1) , nth-last-of-type(1)*/
+    flex-direction:row-reverse;
+}

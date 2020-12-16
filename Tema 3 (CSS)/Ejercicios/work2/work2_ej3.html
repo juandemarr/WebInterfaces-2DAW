@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de pseudo-clases</title>
+    <style type="text/css">
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            display:flex;
+            justify-content:space-around;
+            padding:2%;
+            background-color:#e2e2e2;
+        }
+        
+        /*PSEUDO-CLASES*/
+        
+        /*nth-child => hijo (elemento al que se le pone) de cualquier tipo
+        nth-of-type => hijo SOLO de ese tipo (del elemento al que se le pone)
+        nth-child()             nth-of-type()
+        first-child             first-of-type
+        last-child              last-of-type
+        nth-last-child()        nth-last-of-type()
+        */
+
+        li:first-child,li:last-child{
+            color:blue;
+        }
+        li:nth-child(2),li:nth-child(3),li:nth-last-child(2){
+            color:#3a3a3a;
+        }
+        li:first-of-type{
+            font-size:10px;
+        }
+        li:nth-of-type(2){
+            font-size:15px;
+        }
+        li:nth-of-type(3){
+            font-size:20px;
+        }
+        li:nth-last-of-type(2){
+            font-size:25px;
+        }
+        li:last-of-type{
+            font-size:30px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Dado el siguiente código HTML, y utilizando las pseudo-clases first-child, first-of-type, 
+nth-of-type, nth-last-of-type, last-of-type y last-child conseguir el siguiente resultado-->
+    <ul>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+        <li>Quinto</li>
+    </ul>
+</body>
+</html>

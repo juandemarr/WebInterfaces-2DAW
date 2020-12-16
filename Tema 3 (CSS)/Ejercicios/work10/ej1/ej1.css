@@ -1,0 +1,22 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:95vh;
+}
+#bandera{
+    width:500px;
+    height:200px;
+    background-color:blanchedalmond;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#centro{
+    border-radius:50px;
+    background-color:red;
+    width:30%;
+}

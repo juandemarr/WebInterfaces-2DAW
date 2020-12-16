@@ -1,0 +1,37 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    padding:2%;
+}
+#main{
+    width:500px;
+    height:200px;
+    overflow:scroll;
+    /* overflow-y: scroll; */
+    /* overflow-x: scroll; */
+    /* direction:rtl; *//*Para cambiar la posicion del scroll a la izquierda del contenedor*/
+}
+
+/*Si tenemos un menu o algo en donde pinchamos y no slleva abajo del scroll, para que la bajada sea suave se usa:
+scroll-behavior:smooth;*/
+
+/*Tabla*/
+table{
+    width:600px;
+    height:250px;
+}
+tr:first-child{
+    background-color:#3691db!important;
+}
+tr:nth-child(odd){
+    background-color:#d8ecfa;
+}
+tr:nth-child(even){
+    background-color:#a5cde7;
+}
+tr:hover{
+    background-color:yellow;
+    border:2px solid orange;
+    font-size:larger;
+}

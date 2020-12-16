@@ -1,0 +1,21 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image:url(img/old_paper.jpg);
+    background-size: cover;
+    /*background-clip: content-box; hasta donde quieres que llegue, contenido, padding o margin*/
+}
+body > div{
+    height:97vh;
+    background-image:url(img/decoration.png);
+    background-repeat:no-repeat;
+    background-size:25%;
+}
+body > div > div{
+    height:97vh;
+    background-image:url(img/ribbon.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size:17%;
+}

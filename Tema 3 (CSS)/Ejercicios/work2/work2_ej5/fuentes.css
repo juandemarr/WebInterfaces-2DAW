@@ -1,0 +1,14 @@
+h1{
+    font-family:'Lucida sans';
+    color:rgb(133, 1, 1);
+}
+li{
+    font-family:sans-serif;
+}
+ol{
+    list-style-type: lower-alpha;
+}
+ul{
+    /*list-style-type: square;*/
+    list-style-image: url('img/visas.png');
+}

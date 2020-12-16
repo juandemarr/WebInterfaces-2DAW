@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    box-sizing:border-box
+}
+body{
+    padding:2%;
+    background-color:#1f1f1f;
+    font-weight:bold;
+    font-size:1.3em;
+    color:aliceblue;
+    font-family:monospace;
+    letter-spacing:3px;
+}
+#main{
+    margin:0 auto;
+    width:48%;
+}
+h1{
+    color:orange;
+    text-align:center;
+
+    font-size:2em;
+    font-family:'Indie Flower', cursive;
+    font-variant:small-caps;
+}
+input{
+    background-color: aliceblue;
+    border-radius:5px;
+    font-size:.8em;
+    padding:.7%;
+    margin:0 0 5% 2%;
+}
+input[type="submit"],input[type="reset"]{
+    border-radius:5px;
+    background-color:orangered;
+    color:aliceblue;
+    border:1px solid orangered;
+    padding:1%;
+    width:120px;
+}
+input[type="submit"]:hover,input[type="reset"]:hover{
+    transition:.4s ease-out;
+    background-color:white;
+    color:orangered;
+}
+input[id="email"]:invalid{
+    background-color:rgb(253, 212, 212);
+}
+/*Repetir para el resto de input*/

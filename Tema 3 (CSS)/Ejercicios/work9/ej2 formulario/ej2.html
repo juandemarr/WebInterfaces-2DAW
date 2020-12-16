@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="ej2.css"/>
+</head>
+<body>
+    <form class="myForm">
+        <div class="row">
+          <div class="column">
+            <div class="input-group">
+              <label for="nombre_cliente">Nombre </label>
+              <input id="nombre_cliente">
+            </div>
+            <div class="input-group">
+              <label for="telefono">Teléfono </label>
+              <input type="tel" id="telefono">
+            </div>
+            <div class="input-group">
+              <label for="email">Email </label>
+              <input type="email" id="email">
+            </div>
+            <div class="input-group">
+              <label for="dia_recogida">Fecha y hora de recogida</label>
+              <input type="datetime-local" id="dia_recogida">
+            </div>
+            <div class="input-group">
+              <label for="lugar_recogida">Lugar recogida</label>
+              <select id="lugar_recogida">
+                <option value="" selected="selected">Selecciona lugar</option>
+                <option value="oficina" >Oficina</option>
+                <option value="Neptuno" >Neptuno</option>
+                <option value="Estación autobuses" >Estación autobuses</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="destino">Destino</label>
+              <input type="text" id="destino" list="destinos">
+      
+              <datalist id="destinos">
+                <option value="Aeropuerto">
+                <option value="Motril">
+                <option value="Almuñecar">
+              </datalist>
+            </div>
+          </div>
+          <div class="column">
+            <fieldset class="taxi">
+              <legend>¿Qué vehículo necesita?</legend>
+              <label> <input type="radio" id="taxi_car" value="car"> Coche </label>
+              <label> <input type="radio" id="taxi_van" value="van"> Furgoneta </label>
+            </fieldset>
+      
+            <fieldset class="extras">
+              <legend>Extras</legend>
+              <label> <input type="checkbox" id="sillabebe" value="baby">Silla para bebés </label>
+              <label> <input type="checkbox" id="rampa" value="rampa"> Rampa de acceso </label>
+            </fieldset>
+          </div>
+        </div>
+        
+        <div class="row">
+          
+          <button id="submit">Reservar</button>
+          
+        </div>
+      </form>
+</body>
+</html>
