@@ -17,6 +17,7 @@ body{
 }
 .segundo{
     column-count:3;
+    font-size:8em;
     column-rule-style: dotted;
     column-rule-color: red;
 }

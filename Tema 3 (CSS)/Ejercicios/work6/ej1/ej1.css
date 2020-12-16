@@ -25,7 +25,7 @@ div.exampleborderradiusb {
     height: 65px;
     width:160px;
     text-align: center;
-    border-bottom-right-radius:35%; /*Más inclinado en la base*/
+    border-bottom-right-radius:40% 30%; /*Más inclinado en la base*/
     /* border-radius:40px/20px; Igual. Si es 20px/40px más inclinado en el lado*/
 }
 
@@ -37,7 +37,7 @@ div.exampleborderradiusc {
     height: 65px;
     width:160px;
     text-align: center;
-    border-bottom-right-radius:20px/40px;
+    border-bottom-right-radius:20% 60%;
 }
 
 div.exampleborderradiusd {
@@ -59,7 +59,10 @@ div.exampleborderradiuse {
     height: 65px;
     width:160px;
     text-align: center;
-    border-radius:10%;
+    border-top-left-radius: 20% 10%;
+    border-top-right-radius: 5% 20% ;
+    border-bottom-right-radius: 20% 10%;
+    border-bottom-left-radius: 5% 20%;
 }
 
 div.exampleborderradiusf {
