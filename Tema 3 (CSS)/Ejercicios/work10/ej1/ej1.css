@@ -16,7 +16,9 @@ body{
     align-items:center;
 }
 #centro{
+    width:100px;
+    height:100px;
     border-radius:50px;
     background-color:red;
-    width:30%;
+    border:1px solid lavender;
 }

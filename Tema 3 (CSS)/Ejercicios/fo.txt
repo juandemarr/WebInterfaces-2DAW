@@ -1,0 +1,10 @@
+en google fonts, copiar el enlace del href de <link
+lo abrimos en otra pestaña, buscamos latin-ext y copiamos la url de src. 
+La pegamos en otra pestaña y se descarga en formato woff2
+
+import en css. Preferible
+<link
+font-face para fuentes descargadas
+
+para que el boton vaya a un id y no hacerlo con <a>
+<button role="link" onclick="window.location='#titulo'">Inicio</button> (ver receta)

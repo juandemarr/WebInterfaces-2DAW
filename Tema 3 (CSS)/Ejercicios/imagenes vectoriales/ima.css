@@ -1,0 +1,22 @@
+@keyframes caminar{
+    from{
+        background-position: 0;/*este 0 esta abajo a la izq de la imagen*/
+    }
+    to{
+        background-position:-336px;
+        /*el final tienen que ser el total MENOS el ancho del último frame*/
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+div{
+    width:86px;/*ancho de cada frame*/
+    height:100px;
+    margin:auto;
+    background:url(img.jpg) no-repeat;
+    animation:caminar .8s steps(4) infinite; /*entre parentesis el numero de frames que tenga la imagen MENOS 1*/
+    position:relative;
+    /* overflow:hidden; */
+}
