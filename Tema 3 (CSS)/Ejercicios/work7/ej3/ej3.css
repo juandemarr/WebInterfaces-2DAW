@@ -1,0 +1,49 @@
+@keyframes movimiento{
+    0%{
+        top:0;
+    }
+    100%{
+        top:100%;
+    }
+}
+@keyframes opacidad{
+    100%{
+        opacity:0;
+    }
+}
+body {
+    margin: 40px;
+}
+#container{
+    background: #666 url(https://lh3.googleusercontent.com/WQtp7B0VyKaoXtrfX_WrT1aoeWO_GYKGM45Vv0w4Tgkc5lfD-lq5nEXXiu3iyIHn28mj=s152) no-repeat left top;
+    background-size: 420px 480px;
+    width: 420px;
+    height: 480px;
+    position: relative;
+}
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+}
+.snowflake.f1 {
+    left: 40px;
+    animation:movimiento 3s ease infinite, opacidad 3s ease-out infinite;
+    /*animation: movimiento(animation-name) 2s(animation-duration) ease(animation-timing-function) 2s(animation-delay) infinite(animation-iteration-count) alternate(animation-direction)*/   
+}
+.snowflake.f2 {
+    font-size: 1.8em;
+    left: 120px;
+    animation:movimiento 2s ease-in infinite, opacidad 2s ease-out infinite;
+}
+.snowflake.f3 {
+    left: 200px;
+    animation:movimiento 2.5s ease-out infinite, opacidad 2.5s ease-out infinite;
+
+}
+.snowflake.f4 {
+    font-size: 1.5em;
+    left: 280px;
+    animation:movimiento 3.5s ease-in-out infinite, opacidad 3.5s ease-out infinite;
+
+}
