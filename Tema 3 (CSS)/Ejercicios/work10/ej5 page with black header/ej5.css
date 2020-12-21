@@ -1,0 +1,91 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:#dadada;
+    font-size:1.1rem;
+    font-family:'Gisha';
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:100vh;
+    /* max-height: 600px; *//*Se pide en enunciado*/
+}
+.main{
+    width:60%;
+    margin:0 auto;
+}
+header{
+    background-color:rgb(34, 34, 34);
+    color:#dadada;
+    padding:1.5%;
+    font-size:1rem;
+}
+header div, footer div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header ul, footer ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+header ul{
+    display:flex;
+    justify-content: flex-end;
+}
+header a{
+    color:#dadada;
+    text-decoration:none;
+    padding:20px 15px;
+}
+header a:hover{
+    transition:.6s ease-out;
+    background-color:#dadada;
+    color:black;
+}
+header p, footer p{
+    margin:0;
+}
+section.main{
+    padding:3% 0;
+}
+.author{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.85rem;
+    margin-bottom:3%;
+}
+.author p:first-child{
+    opacity:0.6;
+}
+.author p:nth-child(2){
+    opacity:0.4;
+}
+h1{
+    margin:0 0 2%;
+}
+footer{
+    border-top:1px solid #a3a3a3;
+    font-size:0.9rem;
+    padding:1.5%;
+}
+footer p{
+    opacity:0.4;
+}
+footer ul{
+    width:30%;
+    display:flex;
+    justify-content:space-around;
+}
+footer a{
+    text-decoration:none;
+    color:black;
+    opacity:0.4;
+}
+footer a:hover{
+    transition:.6s ease-out;
+    opacity:1;
+}

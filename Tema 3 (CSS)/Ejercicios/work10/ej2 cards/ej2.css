@@ -9,41 +9,54 @@
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    height:500px;/*vh, habría que ponerle a todo el contenido tbn vh*/
+    height:470px;
     border:1px solid #ccc;
-    box-shadow:2px 2px 5px 2px rgba(0,0,0,0.3);
+    box-shadow:2px 2px 8px 1px rgba(0,0,0,0.3);
     margin-bottom:10%;
-    height:70vh;
+    /* height:70vh; *//*vh, habría que ponerle a todo el contenido tbn vh*/
 }
 .contenido{
-    padding:0 10%;
+    padding:4% 10%;
 }
 .contenido h1{
-    margin: 8% 0;
+    margin: 7% 0;
 }
 .contenido p{
     text-align:left;
+    height:135px;
+    overflow:auto;
 }
+
+/*Scroll personalizado*/
+
+.contenido p::-webkit-scrollbar{
+    width:6px;
+}
+
+.contenido p::-webkit-scrollbar-thumb{
+    background-color:rosybrown;
+    border-radius:5px;
+}
+
+/*//////////////////////////*/
+
 #divImagen{
     background-image:url(hongos.jpg);
     background-size:cover;
     background-repeat:no-repeat;
     background-position:top;
-    height:30vh;
+    height:200px;
 }
 .card button{
-    padding:2%;
+    padding:3%;
     background-color:gray;
     color:white;
 }
-/* img{
-    width:100%;
-    height:20vh;
-} */
+
 @media screen and (min-width:568px){
     #main{
         display:flex;
-        justify-content:space-between;
+        justify-content:space-around;
         flex-wrap:wrap;
         padding:4%;
     }
@@ -53,11 +66,6 @@
     }
 }
 @media screen and (min-width:768px){
-    /*Aparece al reves invertido, es correcto?*/
-    #main{
-        flex-direction:row-reverse;
-        /* flex-wrap:reverse; */
-    }
     .card{
         width:300px;
     }
