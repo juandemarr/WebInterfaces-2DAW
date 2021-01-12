@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+/*CONTENEDOR GRID PADRE*/
+
+body{
+    display:grid;
+    grid-template-areas:"header"
+                        "nav"
+                        "section"
+                        "aside"
+                        "footer";
+    grid-template-rows:3fr 1fr 4fr 3fr 4fr;/*siempre hay que ponerle una altura para que funcione*/
+    height:100vh;
+}
+
+/*ELEMENTOS HIJOS GRID*/
+
+header{
+    grid-area:header;
+    background-color:#f4ddff;
+}
+nav{
+    grid-area:nav;
+    background-color:royalblue;
+}
+section{
+    grid-area:section;
+    background-color: yellowgreen;
+}
+aside{
+    grid-area:aside;
+    background-color: beige;
+}
+footer{
+    grid-area:footer;
+    background-color: limegreen;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width:568px){
+    body{
+        grid-template-areas:"header header"
+                            "nav section"
+                            "aside section"
+                            "footer footer";
+        grid-template-rows: 15% 25% 45% 15%;
+    }    
+}
+@media screen and (min-width:768px){
+    body{
+        grid-template-areas:"header header header"
+                            "nav section aside"
+                            "footer footer footer";
+        grid-template-rows:15% 70% 15%;
+    }
+}
+
