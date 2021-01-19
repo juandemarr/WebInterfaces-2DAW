@@ -1,0 +1,51 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+body{
+    display:grid;
+    grid-template-areas: "header"
+                         "article"
+                         "aside"
+                         "nav"
+                         "footer";
+    height:95vh;
+    grid-gap:.5rem;
+}
+header,article,aside,nav,footer{
+    background-color:yellowgreen;
+    padding:10px;
+}
+header{
+    grid-area: header;
+}
+article{
+    grid-area:article;
+}
+aside{
+    grid-area:aside;
+}
+nav{
+    grid-area: nav;
+}
+footer{
+    grid-area:footer;
+}
+
+@media screen and (min-width:568px){
+    body{
+        
+        grid-template-areas: "header header header header"
+                             "nav article article article"
+                             "aside article article article"
+                             "aside footer footer footer";
+        grid-template-columns:repeat(4,24%);
+        grid-template-rows:10% 50% 30% 10%; 
+    }
+    article{
+        grid-row: span 2;
+    }
+    aside{
+        grid-row: span 2; 
+    }
+}

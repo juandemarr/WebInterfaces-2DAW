@@ -1,0 +1,131 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+body{
+    font-family:sans-serif;
+    height:96vh;
+    display:grid;
+    grid-template-areas:"header header header header"
+                        "hero hero hero hero"
+                        "hero hero hero hero"
+                        "hero hero hero hero"
+                        "hero hero hero hero"
+                        "main main main main"
+                        "main main main main"
+                        "main main main main"
+                        ". . relatedPost ."
+                        "footer footer footer footer"
+                        "extra extra extra extra";
+    grid-template-rows:repeat(11,9%);
+    grid-template-columns:repeat(4,25%);
+    grid-gap:.3rem;
+}
+aside,#relatedImg{
+    display:none;
+}
+header{
+    grid-area:header;
+    background-color:deepskyblue;
+}
+#hero{
+    grid-area:hero;
+    background-color:lavender;
+    /*grid-row: 2 / 6; Si no usamos el grid-template-areas, otra forma de posicionar sería colocando los hijos así*/
+}
+#main{
+    grid-area:main;
+    background-color:goldenrod;
+}
+aside{
+    grid-area:aside;
+    background-color:darkseagreen;
+}
+#extra{
+    grid-area:extra;
+    background-color:gray;
+}
+#relatedImg{
+    grid-area:relatedImg;
+    background-color:forestgreen;
+}
+#relatedPost{
+    grid-area:relatedPost;
+    background-color:pink;
+    grid-column:3;
+    grid-row:8 / span 2;
+}
+footer{
+    grid-area:footer;
+    background-color:orange;
+}
+p{
+    color:white;
+    font-size:1.2rem;
+    text-align:center;
+}
+
+/*HEADER*/
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:100%;
+    padding:0 2%;
+}
+header ul{
+    list-style:none;
+    padding:0;
+    display:flex;
+    justify-content: space-between;
+}
+header ul li{
+    margin-right:10px;
+}
+header a{
+    color:black;
+    text-decoration:none;
+}
+header p{
+    color:black;
+}
+
+/*FOOTER*/
+
+footer{
+    padding:5px;    
+}
+footer p{
+    font-size:1rem;
+}
+footer div{
+    display:flex;
+    justify-content:space-between;
+}
+footer div:first-child{
+    margin-bottom:1%;
+}
+footer div:nth-child(2){
+    justify-content: flex-end;
+}
+
+@media screen and (min-width:568px){
+    body{
+        grid-template-areas:"header header header"
+                            "hero main main"
+                            "aside main main"
+                            "aside extra extra"
+                            "relatedImg relatedImg relatedPost"
+                            "footer footer footer";
+        grid-template-rows:10% 25% 20% 20% 15% 10%;
+        grid-template-columns:repeat(3,33%);
+    }
+    aside,#relatedImg{
+        display:inline;
+    }
+    #relatedPost{
+        grid-column:auto;
+        grid-row:auto;
+    }
+}

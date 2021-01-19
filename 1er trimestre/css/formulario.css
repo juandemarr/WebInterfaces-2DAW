@@ -1,0 +1,103 @@
+body{
+   margin:0 auto;
+   font-size:1rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.formulario{
+   width: 90vw;
+   margin:0 auto;
+   height: 100vh;
+}
+form{
+   width: 100%;
+   color:#6B121B;
+   border-radius:7px;
+  
+   border:1px dotted blue;
+   padding:14px;
+   background-image:linear-gradient(to bottom right, #fff, #00f3ff, #00e1ff, #00e2ff, #00f, #000);
+}
+h1{
+   text-align:center;
+}
+.row{
+   display:flex;
+   flex-flow:row wrap;
+}
+.col{
+   display:flex;
+   flex-flow:column wrap;
+   margin-left: 1rem;
+  }
+.enlinea{
+   display:inline;
+   margin-top:1rem;
+}
+fieldset{
+   border-radius:6px;
+   border:2px dotted darkslategrey;
+   margin-bottom:15px;
+   padding:0 20px;
+}
+legend{
+   color: darkslategrey;
+   font-size:14px;
+   margin-bottom:16px;
+}
+input{
+   background-color:white;
+   border-radius:4px;
+   color:#264F96;
+   font-size:16px;
+   padding:3px 3px 3px 10px;
+   outline: none;
+   margin-bottom: 10px;
+}
+#boton_enviar{
+   padding:6px 30px;
+   background-color:#2A477A;
+   color:white;
+   font-size:14px;
+   height:35px;
+}
+textarea{
+   width:25%;
+   height:60%;
+   max-width:493px;
+   min-width:300px;
+   max-height:200px;
+   min-height:50px;
+   margin-top:4px;
+   border-radius:4px;
+   color:#264F96;
+   font-size:16px;
+   padding:3px 3px 3px 10px;
+}
+::placeholder{
+   color:rgba(0, 0, 255, 0.602);
+}
+input[name="nombre"],input[type="email"]{
+   border:2px solid red;
+}
+input[name="nombre"]:valid,input[type="email"]:valid{
+   border:2px solid green;
+}
+input[name="cp"]:valid{
+   border:2px solid green;
+}
+input[name="cp"]:invalid{
+   border:2px solid red;
+}
+#boton_enviar:hover{
+   transition:.4s ease-out;
+   background-color:#00e2ff;
+}
+#divImagen{
+   display:flex;
+   justify-content:space-between;
+   width:100%;
+ 
+}
+#logo{
+   width:100px;
+}
