@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting Bootstrap</title>
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!--antes de la version 4 no es compatible con flexbox
+    con el preprocesador sass, los ficheros generados tienen distintos nombres, como los de css de bootstrap.
+    min significa que no hay espacios en blanco en el fichero. Ocupa menos espacio. 
+
+    Modo local, descargar.
+    Con link, se actualiza automáticamente.
+
+    ***LAYOUT. CLASES BOOTSTRAP***
+
+    box-sizing por defecto en css esta en content-box. En bootstrap está a border-box. en .container y .container-fluid
+    
+    Tipos de ocntenedores:
+    .container Deja márgenes a dcha e izq (tienen max-width para cada breakpoint)
+    .container-fluid No tiene márgenes
+
+    Puntos de ruptura: 576px 768px 992px 1200px . A PARTIR DE, equivalente a min-width
+    <576px .container (al usar mobile first, ocupara el 100%)
+    >=576px .container-sm   (ocupara 540px)
+    >=768px .container-md   (ocupara 720px)
+    >=992px .container-lg   (ocupara 960px)
+    >=1200px .container-xl (ocupara 1140px)
+
+    .container-fluid ocupará el 100%
+
+    Primero se usa .container, dentro .row y dentro .col si o si.
+    Se pueden anidar las columnas, con row y dentro las columnas, doce columnas y separación de 30px (15px a cada lado de padding lateral dentro de col)
+    col (auto) se le puede indicar -sm pero no número, para que se reparta automáticamente el espacio libre
+    .col-sm- (540px)
+    .col-md- (720px)
+    .col-lg- (960px)
+    .col-xl- (1140px)
+    Después del - se indica el número de columnas hasta que sumen 12. Si no se indica nada sería auto
+    Cuando el tamaño se hace inferior, colapsa y se pone una debajo de otra
+    Las extra pequeñas, xs, nunca colapsan (tambien se puede no poner xs)
+
+    offset. para dejar hueco de un determinado tamaño delante del contenido de dentro. Igual que col-xl-4 => offset-xl-4
+    
+    ALIGN-ITEMS y JUSTIFY-CONTENT
+    Align-items y justify-content. Se le pone al contenedor padre, row, como clase
+    align-items necesita de un height para que surta efecto
+    ej: align-items-center align-items-start align-items-end
+    justify-content-center justigy-content-star justify-content-end justify-content-between justify-content-around
+    justify-content-xl-center
+
+    A las columnas hijos
+    align-self-center ect   Justify-self NO EXISTE
+    align-self-xl-center
+
+
+    ORDER
+    order-3
+    order-lg-2 orden válido solo a partir de pantallas grandes en adelante
+
+    Si hay más de doce columnas, el grupo que se pase baja entero a la siguiente fila, dejando el hueco en la primera fila
+
+    NO-GUTTERS
+    no-gutters se coloca en la fila. Afecta a las columnas, quitándoles el relleno (padding lateral)
+
+    DISPLAY
+    d-none (OCULTA) d-lg-none
+    d-block d-md-block (lo muestra a partir de tamaños medianos)
+    d-inline
+    d-inline-block
+    d-flex
+    d-inline-flex
+    d-table
+    d-table-cell
+    d-table-row
+
+    Ocultar. Como es a partir de, ocultamos el tamaño que queramos y el siguiente tamaño lo visualizamos
+    d-none oculta todos
+    ocultar solo pequeños => .d-none .d-sm-block
+    ocultar solo  medianos => .d-md-none .d-xl-block
+    etc. (ver en pag bootstrap)
+
+    visulaizar toods => d-block
+    visualizar solo en xs => .d-block .d-sm-none
+    visualizar solo en sm => .d-none .d-sm-block .d-md-none 
+    
+    COLORES
+    .bg-primary => celeste-azul
+    .bg-secondary => gris
+    .bg-success => verde claro
+    .bg-danger => rojo
+    .bg-warning => amarillo-naranja
+    .bg-info => celeste intenso
+    .bg-light => blanco
+    .bg-dark => negro
+    .bg-white => blanco
+    .bg-transparent => tambien blanco
+
+    .text-white ...
+
+    Para gradientes => -bg-graient-primary ...
+
+    SIMULAR SALTO DE LINEA con 
+    <div clase ="w-100"></div>
+    para que una fila continúe en la siguiente. Se pone entre mdias de los div col
+
+    col sin número calcula automáticamente el espacio libre (hasta 12) sin tener en cuenta el contenido.
+    col-auto también lo hace pero teniendo en cuenta el contenido, no 12. Si hay mucho texto, hasta puede saltar a la otra
+     fila, aunque siga en el mismo row
+
+    
+
+-->
+
+</body>
+</html>
