@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Componente Nav</title>
+    <title>Componente Modal</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--link de fuentes tienen que ir antes de todo-->
-
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!--link de css mio tienne que ir debajo del de bootstrap-->
-    <link rel="stylesheet" type="text/css" href="nav.css"/>
+    <link rel="stylesheet" type="text/css" href="modal.css"/>
     </head>
   <body>
     <section class="hero d-flex justify-content-center align-items-center">
@@ -40,6 +41,154 @@
     </nav>
 
     <section id="main">
+      <!--card-deck-->
+      <section class="container mt-5 pt-5"><!--el 5 es el maximo que tiene bootstrap-->
+      <div class="card-deck">
+        <div class="card">
+          <a href="" data-toggle="modal" data-target="#miModal3">
+            <img src="img/1.jpeg" class="card-img-top" alt="G.E.M. Shapadora">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              
+              <!-- Modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal3">
+                  Saber más...
+                </button>
+
+                <div class="modal fade" id="miModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <!-- la clase fade no es necesaria, solo un estilo de transicion-->
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        This will make a fine adition to my collection - Grievous alias *cough* *cough*
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!--fin modal-->
+
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/10.png" class="card-img-top" alt="G.E.M. A.I.N.Y.">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/11.png" class="card-img-top" alt="G.E.M. Live">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted d-flex justify-content-center">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--jumbotron-->
+      <section class="jumbotron mt-5">
+        <div class="container text-center">
+          <h1 class="display-4">"I HAVE THE HIGH GROUND!"</h1>
+          <p class="lead my-4">"You understimate my power!"</p>
+          <p class="lead">"Don't try it"</p>
+        </div>
+      </section>
+
+      <!--formulario vertical-->
+      <section class="row">
+      <form class="col-xl-6 offset-xl-3 col-md-8 ofset-md-2 col-10 offset-1 p-5">
+        <legend class="p-3 text-center">
+          <p>Contact us</p>
+        </legend>
+        <div class="form-group">
+          <label for="exampleInputName">Name</label>
+          <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Write your name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Write your password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Submit your comment (optional)"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- formulario horizontal-->
+    <section class="container mt-5 m-sm-5">
+      <div class="row">
+        <form class="col-sm-6 p-2 p-lg-1">
+          
+          <div class="row form-group">
+            <legend class="col-12 p-3 text-center">
+              <p>Contact us</p>
+            </legend>
+          </div>
+          
+          <div class="form-group row">
+            <label for="name" class="col-md-2 offset-md-1 col-form-label">Nombre</label><!--la clase col-form-label centra la etiqueta label con su caja-->
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="name" placeholder="Write your name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-md-2 offset-md-1 col-form-label">Email</label>
+            <div class="col-md-8">
+              <input type="email" class="form-control" id="colFormLabel" placeholder="Write your email">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-primary">Send consult</button>
+          </div>
+        </form>
+
+        <div class="col-sm-6 d-flex justify-content-center">
+          <img id="imgFormularioHor" src="img/samu.jpg" alt="client support"/><!--class="img-fluid"-->
+        </div>
+
+      </div>
+    </section>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deleniti optio nam reprehenderit officiis rem quis ad voluptas ea cumque possimus necessitatibus molestias placeat quo sint incidunt animi dignissimos magnam!
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta minus dolorem necessitatibus, temporibus nisi libero velit exercitationem quae quod amet accusamus magnam unde corporis tenetur repellendus deleniti praesentium repellat blanditiis?
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae aut quisquam similique earum debitis quae, laudantium omnis vel magnam! Excepturi reprehenderit nam neque quidem, voluptatibus odit officiis? Laudantium, atque excepturi.

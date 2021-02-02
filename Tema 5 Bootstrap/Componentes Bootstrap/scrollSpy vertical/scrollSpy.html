@@ -1,45 +1,202 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Componente Nav</title>
+    <title>Componente Modal</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--link de fuentes tienen que ir antes de todo-->
-
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!--link de css mio tienne que ir debajo del de bootstrap-->
-    <link rel="stylesheet" type="text/css" href="nav.css"/>
+    <link rel="stylesheet" type="text/css" href="scrollSpy.css"/>
     </head>
-  <body>
+
+  <body data-spy="scroll" data-target="#miScrollSpy" data-offset="0">
+
     <section class="hero d-flex justify-content-center align-items-center">
       <h1 class="text-white display-3">Bootstrap 4</h1><!--display-4 cambia el tamaño de la letra-->
     </section>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
+    <nav id="miScrollSpy" class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="img/toriis.jpeg" width="30" height="30" class="d-inline-block align-top" alt="logo" loading="lazy">
-        <!--width y  height mejor en css, si queremos que salga centrado al aumentarle el tamaño, ponerle display flex al contenedor a-->
         Bootstrap
       </a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-link nav-item py-3 px-3 py-lg-1 active" href="nav.html">Inicio <span class="sr-only">(current)</span></a>
-          <!--lo ponemos a partir de md porque antes se colapsa en el menu hanburguesa-->
-          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Nosotros</a>
-          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Servicios</a>
-          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Contacto</a>
-        </div>
+        <ul class="nav navbar-nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    
     </nav>
 
-    <section id="main">
+    <section class="principal">
+      <!--card-deck-->
+      <section id="nosotros" class="container mt-5 pt-5"><!--el 5 es el maximo que tiene bootstrap-->
+      <div class="card-deck">
+        <div class="card">
+          <a href="" data-toggle="modal" data-target="#miModal3">
+            <img src="img/1.jpeg" class="card-img-top" alt="G.E.M. Shapadora">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              
+              <!-- Modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal3">
+                  Saber más...
+                </button>
+
+                <div class="modal fade" id="miModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <!-- la clase fade no es necesaria, solo un estilo de transicion-->
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        This will make a fine adition to my collection - Grievous alias *cough* *cough*
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!--fin modal-->
+
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/10.png" class="card-img-top" alt="G.E.M. A.I.N.Y.">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/11.png" class="card-img-top" alt="G.E.M. Live">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted d-flex justify-content-center">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--jumbotron-->
+      <section id="servicios" class="jumbotron mt-5">
+        <div class="container text-center">
+          <h1 class="display-4">"I HAVE THE HIGH GROUND!"</h1>
+          <p class="lead my-4">"You understimate my power!"</p>
+          <p class="lead">"Don't try it"</p>
+        </div>
+      </section>
+
+      <!--formulario vertical-->
+      <section id="contacto" class="row">
+      <form class="col-xl-6 offset-xl-3 col-md-8 ofset-md-2 col-10 offset-1 p-5">
+        <legend class="p-3 text-center">
+          <p>Contact us</p>
+        </legend>
+        <div class="form-group">
+          <label for="exampleInputName">Name</label>
+          <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Write your name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Write your password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Submit your comment (optional)"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- formulario horizontal-->
+    <section class="container mt-5 m-sm-5">
+      <div class="row">
+        <form class="col-sm-6 p-2 p-lg-1">
+          
+          <div class="row form-group">
+            <legend class="col-12 p-3 text-center">
+              <p>Contact us</p>
+            </legend>
+          </div>
+          
+          <div class="form-group row">
+            <label for="name" class="col-md-2 offset-md-1 col-form-label">Nombre</label><!--la clase col-form-label centra la etiqueta label con su caja-->
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="name" placeholder="Write your name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-md-2 offset-md-1 col-form-label">Email</label>
+            <div class="col-md-8">
+              <input type="email" class="form-control" id="colFormLabel" placeholder="Write your email">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-primary">Send consult</button>
+          </div>
+        </form>
+
+        <div class="col-sm-6 d-flex justify-content-center">
+          <img id="imgFormularioHor" src="img/samu.jpg" alt="client support"/><!--class="img-fluid"-->
+        </div>
+
+      </div>
+    </section>
+
+    <section>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deleniti optio nam reprehenderit officiis rem quis ad voluptas ea cumque possimus necessitatibus molestias placeat quo sint incidunt animi dignissimos magnam!
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta minus dolorem necessitatibus, temporibus nisi libero velit exercitationem quae quod amet accusamus magnam unde corporis tenetur repellendus deleniti praesentium repellat blanditiis?
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae aut quisquam similique earum debitis quae, laudantium omnis vel magnam! Excepturi reprehenderit nam neque quidem, voluptatibus odit officiis? Laudantium, atque excepturi.
@@ -69,12 +226,8 @@
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem repellendus atque fuga eos iusto inventore dolorem, dolore aspernatur nihil quam voluptate, veritatis, voluptates doloribus sed asperiores autem nesciunt! Iusto, illo!
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo beatae esse eaque cupiditate voluptatem incidunt sint odio doloremque deserunt. Esse totam tempore nostrum quod, vel praesentium nulla. Blanditiis, ad.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt alias nam asperiores vero? Reprehenderit necessitatibus odio, voluptates quo expedita minus natus sequi laudantium doloremque quaerat debitis voluptatibus amet ab cum.
-
     </section>
-
-
-
-
+  </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

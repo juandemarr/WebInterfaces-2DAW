@@ -27,17 +27,15 @@ body{/*aunque sea inherit, si es necesario ponerlo ya que bootstrap también los
     background-color:inherit;
     overflow-x:hidden;
     overflow-y:scroll;
-
+    position:relative;
 }
 
 /*Cambiar estilos bootstrap*/
-.navbar-dark .navbar-nav .nav-link{/*copiar la cadena de selectores de bootstrap para sobreescribir o 
-    con !important solo a la clase necesaria*/
+.nav-link{
     color:var(--main-color);
     font-size:1.05rem;
-    /* font-weight:bold; */
 }
-.navbar-dark .navbar-nav .nav-link:hover{
+.nav-link:hover{
     transition:.4s ease-out;
     color:var(--bg-color);
 }
