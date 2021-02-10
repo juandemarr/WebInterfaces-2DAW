@@ -1,0 +1,126 @@
+:root{
+    --main-font:'Cuprum';
+    --alternate-font: sans-serif;
+    --font-size:16px;
+    --line-height:1.6;
+    --main-color:#0096d9;
+    --main-modal-color: rgba(0, 150, 217, .75);
+    --muted-color:rgba(0,150,217,.15);
+    
+    --second-color: #171226;
+    --bg-color:#fff;
+    --text-color:#333;
+
+}
+/*inicializar a  mis valores*/
+html {
+    font-family: var(--main-font), var(--alternate-font);
+    font-size: var(--font-size);
+    line-height:  var(--line-height);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  body {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+
+/* cambios en bootstrap*/
+.bg-dark {
+    background-color:var(--second-color) !important;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    transition: all .3s ease;
+  }
+
+  .navbar-dark .navbar-toggler-icon:hover{
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 150, 217, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  .nav-item:hover{
+      background-color:var(--main-modal-color);
+  }
+/*
+  .nav-link{
+      color:var(--main-color) !important;*/
+ .navbar-dark .navbar-nav .nav-link {/*mismo selector de bootstrap*/
+      color: var(--main-color);
+      font-size:1.15rem;
+      font-weight: bold;
+      transition: all .5s ease;
+      -webkit-transition: all .5s ease  ;
+      -moz-transition: all .5s ease  ;
+      -ms-transition: all .5s ease  ;
+      -o-transition: all .5s ease  ;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+     color: var(--bg-color);
+}
+
+.navbar-brand img{
+    width: 2rem;
+    height: 2rem;
+}
+.btn-primary {
+  background-color:var(--second-color);
+  border-color: var(--second-color);
+  transition:all .5s ease;
+  color: var(--main-color);
+  font-size:1.15rem;
+  font-weight: bold;
+  -webkit-transition:all .5s ease;
+  -moz-transition:all .5s ease;
+  -ms-transition:all .5s ease;
+  -o-transition:all .5s ease;
+}
+.btn-primary:hover {
+  color:var(--bg-color);
+  background-color:var(--main-modal-color);
+  
+}
+/*para jumbotron*/
+.jumbotron{
+  background-color:var(--muted-color);
+  font-family: 'Courgette', cursive;
+}
+
+/*mis estilos*/
+.hero{
+  background-image: url("../images/alice.jpeg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*media queries*/
+/*dispositivos pequeños*/
+@media (min-width: 576px) {
+  .card-deck {
+    flex-direction: column;
+}
+}
+
+/*tablets*/
+@media (min-width: 768px) {
+  .card-deck {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+}
+
+/*desktop*/
+@media (min-width: 992px) {
+
+}
+
+/*extra large*/
+@media (min-width: 1200px) {
+
+}

@@ -99,7 +99,7 @@ form{
 .bg-dark{
     background-color:var(--second-color) !important;/*esta variable se define arriba en :root
     bootstrap lo usa de sass.
-    Ventaja: no hay que vovler a repetir el valor*/
+    Ventaja: no hay que volver a repetir el valor*/
 }
 #imgFormularioHor{
     object-fit:contain;
