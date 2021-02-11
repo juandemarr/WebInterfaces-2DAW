@@ -1,0 +1,156 @@
+@import "footer";/*los parciales empiezan el nombre de fichero con guion bajo.
+Se importan aquí y así solo compilamos este archivo principal*/
+/*Aquí solo se indica el nombre, sin guin obajo ni extension de archivo
+Ahora compilamos la estructura de carpetas scss en la carpeta css
+sass scss:css*/
+
+//Compilar solo un fichero:
+//sass scss/estilos.scss css/estilos.css
+//la variable puede contener cualquier valor
+//VARIABLES ÁMBITO GLOBAL. Se declaran al principio
+//colores
+$color-primary:orange;
+$color-secondary:gray;
+$color-tertiary:royalblue;
+
+//tamaño fuentes
+$font-lg:40px;
+$font-md:30px;
+$font-sm:20px;
+
+//ANIDAMIENTO
+.nav{//para indentar clases no hay que repetirlas, se ponen dentro del padre
+    background-color:$color-primary;
+    ul li{
+        list-style:none;
+    }
+    a{//tambien se puede poner dentro de li, especificando que es un hijo directo suyo
+        text-decoration:none;
+        font-size:$font-sm;
+        color:$color-secondary;
+        &:hover{//el & se sustituye por su padre (a). Así se ponen las pseucoclases
+            color:$color-tertiary;
+
+        }
+    }
+}
+///////////////////////////////////
+//@MIXIN
+/*mixin directiva de Sass (empiezan con @) que permite definir estilos que luego 
+puedo usar con o son parámetros. Agrupa un conjunto que se repitirán 
+en unas cuantas etiquetas*/
+@mixin headingstyles($fontsize){//cuando haya una o mas varibales con el mismo nombre pero distinto valor, se ponen como parámetros, separados por comas
+    //y para usarlo le pasamos el valor en la llamada a esa propiedad
+    color:$color-secondary;
+    text-align:center;
+    font-size:$fontsize;
+}
+//propiedad que usa más de un valor
+@mixin transicion($param...){
+    transition:$param;
+
+}
+///////////////////////////////////////
+//@FUNCTION
+//Parecido a mixin, solo que aquí podemos realizar alguna opperación
+@function fontsize($size:25px){//el valor se le puede asignar también al llamarla, en lugar de aquí.
+    //Esto sería con valor por defecto
+    @return $size*2;
+}
+//APLICANDO LAS FUNCIONES
+.banner p{
+    font-size:fontsize($font-sm);
+}
+.footer p{
+    font-size:fontsize();
+}
+//FUNCIONES PREDETERMINDAS DE SASS (CON COLORES)
+//ver los que hay en la documentacion built in modules
+.nav{
+    background-color:darken($color-primary, 40%);
+    //background-color:lighten($color-primary, 25%);
+    //background-color:transparentize($color-primary, .5);
+    //background-color:mix(lightblue,red);
+    //background-color:mix(lightblue,red,10%);
+        //el 10% para el azul claro, el resto para el rojo
+}
+
+
+////////////////////////////////////
+//@EXTEND
+/*@extend: directiva que permite a un selector heredar los estilos de otro selector*/
+//No admite parámetros. Se define la clase, que s epuede haber usado o no en el html
+//y en el otro selector se pone @extend nombreClase
+.heading{
+    font-size:$font-lg;
+    color:$color-primary;
+    background-color:$color-secondary;
+    text-align:center;
+}
+
+
+.banner h1{
+    @extend .heading;
+    &:hover{
+        background-color:green;
+    }
+}
+h1{
+    @extend .heading;
+    &:hover{
+        background-color:green;
+    }
+}
+.footer h3{
+    //@extend .heading;
+    @extend h1;//tiene que estar definido h1 como selector único
+    //con sus estilos
+}
+/*.banner h1{
+    //ámbito local
+    $color-secondary:green;//sobreescribe el color solo en esta etiqueta
+    //así la hago global, pero no es lo más recomendable
+    //$color-secondary:green !global;
+    color:$color-secondary;
+    text-align:center;
+    font-size:$font-lg;
+}*/
+//////////////////////////////////
+//APLICANDO MIXIN CON @INCLUDE
+.banner h1{
+    //font-size:$font-lg;
+    @include headingstyles($font-lg);//para usar un @mixing se hace con @include nombre()
+}
+.footer h3{
+    @include headingstyles($font-md);
+    @include transicion(color .5s, background-color 1s);
+    //font-size:$font-md;
+    //color:$color-secondary;
+    //text-align:center;
+    &:hover{
+        color:$color-tertiary;
+        background-color:$color-primary;
+    }
+}
+///////////////////////////////////
+//PLACEHOLDER. %nombreClase
+//Para definir una clase que no se usa en html, ya que no produce salida en css
+//Como comentar una clase
+%heading{
+    font-size:$font-lg;
+    color:$color-primary;
+    background-color:$color-secondary;
+    text-align:center;    
+}
+//SE USA CON EXTEND
+h1{
+    @extend %heading;
+    &:hover{
+        background-color:green;
+    }
+}
+
+
+
+
+

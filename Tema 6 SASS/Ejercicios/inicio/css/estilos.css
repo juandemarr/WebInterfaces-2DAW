@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*los parciales empiezan el nombre de fichero con guion bajo.
+Se importan aquí y así solo compilamos este archivo principal*/
+/*Aquí solo se indica el nombre, sin guin obajo ni extension de archivo
+Ahora compilamos la estructura de carpetas scss en la carpeta css
+sass scss:css*/
+.nav {
+  background-color: orange;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+.nav a:hover {
+  color: royalblue;
+}
+
+/*mixin directiva de Sass (empiezan con @) que permite definir estilos que luego 
+puedo usar con o son parámetros. Agrupa un conjunto que se repitirán 
+en unas cuantas etiquetas*/
+.banner p {
+  font-size: 40px;
+}
+
+.footer p {
+  font-size: 50px;
+}
+
+.nav {
+  background-color: #332100;
+}
+
+/*@extend: directiva que permite a un selector heredar los estilos de otro selector*/
+.heading, h1, .footer h3, .banner h1 {
+  font-size: 40px;
+  color: orange;
+  background-color: gray;
+  text-align: center;
+}
+
+.banner h1:hover, .banner .footer h3:hover, .footer .banner h3:hover {
+  background-color: green;
+}
+
+h1:hover, .footer h3:hover {
+  background-color: green;
+}
+
+/*.banner h1{
+    //ámbito local
+    $color-secondary:green;//sobreescribe el color solo en esta etiqueta
+    //así la hago global, pero no es lo más recomendable
+    //$color-secondary:green !global;
+    color:$color-secondary;
+    text-align:center;
+    font-size:$font-lg;
+}*/
+.banner h1, .banner .footer h3, .footer .banner h3 {
+  color: gray;
+  text-align: center;
+  font-size: 40px;
+}
+
+.footer h3 {
+  color: gray;
+  text-align: center;
+  font-size: 30px;
+  transition: color 0.5s, background-color 1s;
+}
+.footer h3:hover {
+  color: royalblue;
+  background-color: orange;
+}
+
+h1, .footer h3 {
+  font-size: 40px;
+  color: orange;
+  background-color: gray;
+  text-align: center;
+}
+
+h1:hover, .footer h3:hover {
+  background-color: green;
+}
+
+/*# sourceMappingURL=estilos.css.map */

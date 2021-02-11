@@ -1,0 +1,13 @@
+.heading{
+    /*posicionar cabecera en grid header*/ 
+    /*centrado, debajo logo y menú*/ 
+   
+    &-text{
+        font-family: 'Great Vibes', Cursive;
+        /*función size para tamaño texto*/ 
+        font-size:size(xl) * 2; 
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+    }
+
+}

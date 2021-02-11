@@ -1,0 +1,24 @@
+/*paleta de colores*/
+$colors: (
+    primary: #333,
+    secondary: #ffe,
+    tertiary: #f2f0f1,
+    quaternary: #f5b149,
+);
+/*función q devuelve color*/
+@function color ($color-name){
+    @return map-get($colors, $color-name);
+}
+
+/*tamaños fuente*/
+$font-sizes:(
+    xl:3rem,
+    lg:2.5rem,
+    md:2rem,
+    sm:1.8rem,
+    xs:1.6rem
+);
+/*función q devuelve un tamaño*/ 
+@function size($size){
+    @return map-get($font-sizes, $size);
+}

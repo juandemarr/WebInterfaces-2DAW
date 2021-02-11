@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+
+para instalar sass: npm install -g sass
+
+
+para compilar con node, instalar:
+npm -i g node-sass
+
+para crear el package json:
+npm init --yes
+
+escribimos en el script de package.json:
+"watch": "node-sass -o css scss -w"    ó   "watch": "node-sass -o css scss/estilos.scss -w"   (he visto que da igual)
+y en cmd:
+npm run watch
+
+//Con esto, se compila solo automaticamente. Cada vez que hagamos un
+//cambio en el scss se reflejará en el css.
+//Al guardar el primer cambio en scss, se generará el css
+
+////////////////////////////////////
+puedo incluir un elemento declarado en un parcial _nombre.scss en otro parcial _otro.scss sin importar nada
+
+las media queries van dentro de cada elemento. PUEDEN IR ABAJO JUNTAS??

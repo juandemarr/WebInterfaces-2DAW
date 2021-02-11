@@ -1,0 +1,61 @@
+.logo{
+    font-size:4rem;
+    color:$color-primary;
+    @include flexlayout;
+    width: 7rem;
+    height: 7rem;
+    margin-right:2px;
+    border:3px solid $color-primary;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+.main-name{
+    font-family: $font-nunito;
+    font-size: 3rem;
+    color:$color-secondary;
+    @include textStyles;
+}
+.sub-name{
+    font-family: $font-josefin;
+    font-size: 1rem;
+    color:$color-secondary;
+    text-align: center;
+    @include textStyles;
+}
+.main-heading{
+    font-family: $font-dancing;
+    font-size: 4rem;
+    font-weight: 300;
+    color:$color-primary;
+    margin-bottom: 40px;
+}
+.sub-heading{
+    font-family: $font-josefin;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color:$color-secondary;
+    margin-bottom: 80px;
+}
+.main-btn{
+    width: 170px;
+    height: 45px;
+    font-family: $font-josefin;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:$color-primary;
+    background-color: transparent;
+    border:1px solid $color-primary;
+    outline:none;
+    cursor:pointer;
+    transition: all .4s;
+    
+    &:hover{
+        background-color:$color-primary;
+        color:$color-dark;
+    }
+}
