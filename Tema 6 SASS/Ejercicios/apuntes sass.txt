@@ -21,4 +21,12 @@ npm run watch
 ////////////////////////////////////
 puedo incluir un elemento declarado en un parcial _nombre.scss en otro parcial _otro.scss sin importar nada
 
-las media queries van dentro de cada elemento. PUEDEN IR ABAJO JUNTAS??
+las media queries van dentro de cada elemento si o si.
+_base cosas a reutilizar (variables, funciones---)
+_layout maquetacion del contenido principal
+_componentes menu logo etc
+
+los comentarios:
+/*apareceran en css despues de compilar, pero no en modo comprimido*/
+/*! aparecera hasta en modo coprimido*/
+//no aparecera en css tras compilar

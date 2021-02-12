@@ -32,6 +32,15 @@
     font-weight: 300;
     color:$color-primary;
     margin-bottom: 40px;
+    @media(min-width:576px){
+        font-size:5rem;
+    }
+    @media(min-width:768px){
+        font-size:5.5rem;
+    }
+    @media(min-widht:992px){
+        font-size:6rem;
+    }
 }
 .sub-heading{
     font-family: $font-josefin;
@@ -39,6 +48,15 @@
     font-weight: 300;
     color:$color-secondary;
     margin-bottom: 80px;
+    @media(min-width:576px){
+        font-size:1.5rem;
+    }
+    @media(min-width:768px){
+        font-size:2rem;
+    }
+    @media(min-width:992px){
+        font-size:3rem; 
+    }
 }
 .main-btn{
     width: 170px;
@@ -57,5 +75,70 @@
     &:hover{
         background-color:$color-primary;
         color:$color-dark;
+    }
+}
+.card{
+    width:33.3333%;
+    height:30vh;
+    position:relative;
+    overflow:hidden;
+
+    &:hover .card-overlay{
+        left:0;
+    }
+    &-overlay{
+        position:absolute;
+        top:0;
+        left:-100%;
+        background-color:rgba($color-primary,.6s);
+        color:$color-white;
+        z-index:10;
+        @include flexlayout;
+        flex-direction:column;
+        @extend %fullSpace;
+        transition:left .7s;
+    
+        &-heading{
+            font-family:$font-nunito;
+            font-size:1rem;
+            @include textStyles(capitalize);
+            @include tamanofuente(1rem,2rem,3rem);
+        }
+        &-paragraph{
+            font-family:$font-josefin;
+            font-size:.8rem;
+            margin-bottom:30px;
+            @include textStyles(capitalize);
+            @include tamanofuente(1rem,1.5rem,2rem);
+        }
+        &-btn{
+            width:100px;
+            height:30px;
+            color:$color-primary;
+            background-color:$color-white;
+            font-family:$font-josefin;
+            font-size:1rem;
+            font-weight:bold;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            border:1px solid $color-primary;
+            border-radius:30px;
+            outline:none;
+            cursor:pointer;
+            @include tamanofuente(1.2rem,1.5rem,2rem);
+            @media(min-width:768px){
+                width:130px;
+                height:30px;
+            }
+            @media(min-width:992px){
+                width:150px;
+                height:40px;
+            }
+        }
+    }
+    &-img{
+        @extend %fullSpace;
+        object-fit:cover;
+        opacity:.5s;
     }
 }
