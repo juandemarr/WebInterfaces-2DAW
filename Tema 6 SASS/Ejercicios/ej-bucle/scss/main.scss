@@ -1,0 +1,36 @@
+$colors:(
+    1:red,
+    2:green,
+    3:blue,
+    4:orange
+);
+//through (incluye el final) | to (no incluye el final)
+@for $i from 1 through 4{
+    .paragraph-#{$i}{
+        background-color:map-get($colors,$i);
+    }
+}
+
+//bucle each
+$colors:red green blue orange; //lista
+
+@each $color in $colors{
+    .paragraph-#{$color}{
+        background-color:$color;
+    }
+}
+
+//condicional if
+@mixin headingSize($size){
+    @if($size == large){ //aunque solo haya una instruccion, necesita de las llaves
+        font-size:45px;
+    }@else if($size == medium){
+        font-size:30px;
+    }@else{
+        font-size:15px;
+    }
+}
+
+h1{
+    @include headingSize(small);
+}

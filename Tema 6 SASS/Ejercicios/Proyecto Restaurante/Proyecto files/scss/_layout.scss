@@ -147,8 +147,22 @@
         }
 
     }
+    &-copyright-paragraph{
+        font-family:$font-josefin;
+        font-size:0.75rem;
+        color:$color-secondary;
+        @include textStyles(capitalize);
 
-    .social-paragraph{
+        @media(min-width:576px){
+            font-size:1rem;
+        }
+        @media(min-width:768px){
+            margin:auto;
+            text-align:center;
+        }
+    }
+}
+    /* .social-paragraph{
         font-family:$font-josefin;
         font-size:0.75rem;
         color:$color-secondary;
@@ -161,8 +175,5 @@
         @media(min-width){
             text-align:center;
         }
-    }
+    } */
 
-
-
-}

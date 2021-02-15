@@ -12,6 +12,8 @@ npm init --yes
 escribimos en el script de package.json:
 "watch": "node-sass -o css scss -w"    ó   "watch": "node-sass -o css scss/estilos.scss -w"   (he visto que da igual)
 y en cmd:
+
+//////////////////IMPORTANTE
 npm run watch
 
 //Con esto, se compila solo automaticamente. Cada vez que hagamos un
@@ -30,3 +32,52 @@ los comentarios:
 /*apareceran en css despues de compilar, pero no en modo comprimido*/
 /*! aparecera hasta en modo coprimido*/
 //no aparecera en css tras compilar
+
+
+//TEORIA 2 PDF
+tipos de datos:
+numbers
+strings
+colors
+lists (como arrays)
+    .lists{
+        margin:10px 15px 5px 20px; (al tener varios valores se considera como una lista o array de valores)
+        font-family:'Raleway','Dosis','Lato';
+        border:1px solid red;
+    }
+maps (array asociativo, cuyos indices creo yo)
+    $colors:(//puede usarse para definir los breakpoints
+        "primary":red,
+        2:green,
+        3:blue
+    )
+    //para usarlo:
+    h1{
+        color:map-get($colors,primary); //map-get($nombreArray,indice)
+        background-color:map-get($colors,2);
+    }
+booleans
+null
+
+INTERPOLACION
+usar variables como nombres de valores css
+$b: "border"; //para usarlo como nombre de propiedad se pone delante #{}
+                //para usarlo como contenido de una variable, solo con $
+
+h2{
+    box-sizing:#{$b}-box;
+    #{$b}:1px solid blue;
+    background-#{$c}:green;
+}
+
+//Interpolacion en el uso de funciones$fondo:"images/fondos/default.png;
+
+.container{
+    background-image:url('#{$fondo}');
+}
+//Interpolacion en comentarios
+$autor:"OpenWebinars
+/*
+    Web desarrollada por #{$autor}
+*/
+
