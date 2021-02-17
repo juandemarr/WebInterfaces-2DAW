@@ -33,6 +33,8 @@ los comentarios:
 /*! aparecera hasta en modo coprimido*/
 //no aparecera en css tras compilar
 
+//TEORIA 1 PDF
+en ej inicio
 
 //TEORIA 2 PDF
 tipos de datos:
@@ -70,7 +72,8 @@ h2{
     background-#{$c}:green;
 }
 
-//Interpolacion en el uso de funciones$fondo:"images/fondos/default.png;
+//Interpolacion en el uso de funciones
+$fondo:"images/fondos/default.png;
 
 .container{
     background-image:url('#{$fondo}');
@@ -81,3 +84,62 @@ $autor:"OpenWebinars
     Web desarrollada por #{$autor}
 */
 
+en el main.scss los llamamos por orden de generalidad, el que tenga mas cosas que se usen por los demas ficheros
+van al principio
+
+/*EXTRA D ELISTAS E INTERPOLACION
+$animlist:1 0s, 2 4s, 3 8s, 4 12s, 5 16s; //los elementos de la lista pueden ser pares de valores
+
+@each $item in $animlist{
+    .slideshow-slide:nth-child(#{nth($item,1)}){//ese uno hace que me quede con la primera parte de 1 0s
+        animation-delay:nth($item,2);
+    }
+}
+
+//EJEMPLO DE BUCLE CON MAP
+$animmap:(
+    1: 0s,
+    2: 4s,
+    3: 8s,
+    4: 12s,
+    5: 16s
+);
+
+@each $key, $value in $animmap{
+    .slideshow-slide:nth-child(#{$key}){
+        animation-delay:$value;
+    }
+}
+
+//EJEMPLO DE MIXIN RESPONSIVE. Aqui no es necesario que sea mobile first o desktop.
+//Se puede mejorar cambiando a map
+@mixin response($breakpoint){
+    @if($breakpoint == xl){
+        @media(max-width:1200px){
+            @content;//@content incluye TODAS las reglas que se pongan al llamarse con @include
+        }
+    }
+
+    @if($breakpoint == lg){
+        @media(max-width:992px){
+            @content;
+        }
+    }
+
+    @if($breakpoint == md){
+        @media(max-width:768px){
+            @content;
+        }
+    }
+
+    @if($breakpoint == sm){
+        @media(max-width:576px){
+            @content;
+        }
+    }
+}
+
+Se llama con 
+@include response(xl){
+        height:70vh;
+}

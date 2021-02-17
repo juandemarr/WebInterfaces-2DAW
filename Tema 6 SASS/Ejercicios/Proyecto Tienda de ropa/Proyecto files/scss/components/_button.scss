@@ -1,0 +1,63 @@
+.btn{
+    width:16rem;
+    height:4rem;
+    text-decoration:none;
+    border:.1rem solid black;
+    position:relative;
+
+    @include flexposition(space-around);
+
+    &:hover .btn-bg{
+        width:18rem;
+    }
+    &:hover .btn-text{
+        color:color(secondary);
+    }
+    &:hover .arrow{
+        transform:translate(1rem);
+    }
+    &:hover .arrow-line-1{
+        width:2rem;
+    }
+    &-bg{
+        width:4rem;
+        height:4rem;
+        background-color:color(primary);
+        border-radius:5rem;
+        position:absolute;
+        left:0;
+        transform:width 0.2s;//DA ERROR XK
+    }
+    &-text{
+        font-size:size(xs);
+        text-transform:(uppercase);//XK ENTRE PARENTESIS. es lo mismo con que sin parentesis
+        color:color(primary);
+        z-index:10;    
+    }
+    .arrow{
+        @include flexposition();
+        transition:transform 0.2s;
+
+        &-line{
+            height:.2rem;
+            background-color:color(secondary);
+            position:absolute;
+            transform-origin:right;//cambia la posicion original del elemento. primer valor en el eje x, segundo valor en el eje y,
+            //tercer valor en el eje z
+        }
+        &-line-1{
+            width:1rem;
+            transform:translateX(-0.7rem);
+            transition:width 0.2s;
+        }
+        &-line-2{
+            width:1rem;
+            transform:rotateZ(45deg); 
+        }
+        &-line-3{
+            width:1rem;
+            transform:rotateZ(-45deg);
+        }
+    }
+
+}

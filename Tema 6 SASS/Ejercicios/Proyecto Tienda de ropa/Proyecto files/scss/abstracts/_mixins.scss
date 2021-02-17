@@ -1,11 +1,73 @@
 @mixin navigation (){
-    &-list{
-       
+    &-list{//este & aquí no tiene padre, pero al colorcarlo con @include, será sustituido for .first-nav, su etiqueta padre allí
+       display:flex;
+       justify-content:space-around;
+       align-items:center;
+       height:100%;
     }
     &-item{
-       
+       list-style-type:none;
     }
     &-link{
-        
+        color:color(primary);
+        font-size:size(sm);
+        text-decoration:none;
+        transition:all .5s;
+        &-hover{
+            color:lighten(color(primary),40%);//funcion predeterminada de sass
+        }
+    }
+}
+
+/*hacer responsive*/
+@mixin response($breakpoint){//para mobile first seria al reves el orden y con min-width
+    @if($breakpoint == xl){
+        @media(max-width:1200px){
+            @content;//@content incluye las reglas que se pongan al llamarse con @include
+        }
+    }
+
+    @if($breakpoint == lg){
+        @media(max-width:992px){
+            @content;
+        }
+    }
+
+    @if($breakpoint == md){
+        @media(max-width:768px){
+            @content;
+        }
+    }
+
+    @if($breakpoint == sm){
+        @media(max-width:576px){
+            @content;
+        }
+    }
+}
+
+/*posicionar con flex*/
+@mixin flexposition($justifycontent:center, $alignitem:center){
+    display:flex;
+    justify-content:$justifycontent;
+    align-items:$alignitem;
+}
+
+@mixin footerlist{
+    &-heading{
+        font-size:size(lg);
+        color:color(primary);
+    }
+    &-item{
+        list-style:none;
+        margin:1rem 0;
+    }
+    &-link{
+        text-decoration:none;
+        font-size:size(sm);
+        color:lighten(color(primary),15%);
+        &-hover{
+            color:lighten(color(primary),40%);
+        }
     }
 }

@@ -1,11 +1,14 @@
 .heading{
     /*posicionar cabecera en grid header*/ 
-    /*centrado, debajo logo y menú*/ 
+    /*centrado, debajo logo y menú*/
+    grid-column:1 / -1;
+    grid-row:2 / 3;
+    text-align:center;
    
     &-text{
         font-family: 'Great Vibes', Cursive;
         /*función size para tamaño texto*/ 
-        font-size:size(xl) * 2; 
+        font-size:size(xl) * 2; //al ser el resultado de una funcion, se puede mult xL por 2
         font-weight: lighter;
         letter-spacing: 0.5rem;
     }
