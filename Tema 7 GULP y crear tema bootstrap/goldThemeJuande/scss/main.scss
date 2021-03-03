@@ -1,0 +1,104 @@
+//Variables
+$gold:#a07023;
+$black:rgb(10, 10, 10);
+$orangered:darken(rgba(245, 65, 0, 0.9),7%);
+$orangered-hover:lighten(rgba(255, 68, 0, 0.931),37%);
+$notdark:#2e2e2e;
+$notblank:#f0f0f0;
+$darkred:#770000c9;
+$darkred-hover:#7c3a3a4d;
+$purple:#aa21c2;
+$green:#7fd41d;
+$blue:#00196d;
+$grey:#d8d8d8;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "gold":              $gold,
+    "black":             $black,
+    "orangered":         $orangered,
+    "orangered-hover":   $orangered-hover,
+    "notdark":           $notdark,
+    "notblank":          $notblank,
+    "darkred":           $darkred,
+    "darkred-hover":     $darkred-hover,
+    "purple":            $purple,
+    "green":             $green,
+    "blue":              $blue,
+    "grey":              $grey
+  ),
+  $colors
+);
+
+
+$primary:       $gold;
+$secondary:     $black;
+/*$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;*/
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    /*"success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark*/
+  ),
+  $theme-colors
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+.navbar-collapse {
+    flex-basis:0;
+    flex-grow: 0;
+}
+/* @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, lg);
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, lg);
+    $infix: breakpoint-infix($next, lg);
+
+   
+    @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+    }
+} */
+
+.navbar-expand{
+    @media(min-width:992px){
+        justify-content: space-between!important;
+    }
+}
+
+/*@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";*/
+
+/* @import "../node_modules/bootstrap/scss/nav.scss";
+@import "../node_modules/bootstrap/scss/navbar.scss"; */
+@import "../node_modules/bootstrap/scss/bootstrap";

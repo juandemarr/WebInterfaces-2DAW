@@ -1,4 +1,7 @@
 //instalar gulp por node
+//-g y en local con --save
+//instalar plugins en local
+
 //para ver las tareas: gulp --tasks
 //para ejecutar las tareas, se llama a gulp nombreFuncion
 //gulp concatenar
@@ -12,12 +15,13 @@
 //plugins a usar
 //crear gulpfile.js. Gestor de tareas que automatiza ciertas tareas ala hora de compilar y poner un proyecto en produccion
 const rename=require("gulp-rename");
+const processhtml=require("gulp-processhtml")
 const concat=require("gulp-concat");
 const gulpif=require("gulp-if");
 const pleeease=require("gulp-pleeease");//para eliminar aquello innecesario en un fichero
 const sass=require("gulp-dart-scss");//hay mas plugins para compilar sass
 const sassdoc=require("sassdoc")//no sirve, deprecated
-const{src,dest,series}=requires("gulp");//origne, destino, trabajar en series
+const{src,dest,series}=requires("gulp");//origen, destino, trabajar en series
 
 function concatenar(){
     return src("css/*.css")//origen de todos los ficheros css que se encuentran en la carpeta css
@@ -101,6 +105,16 @@ exports.default=parallel(compila,mover,procesar_html);//con esto solo habría qu
 //background-color:orangered !default significa que usara esa propiedad por defecto
 
 //compilar con npm run watch
+
+//instalar:
+//npm install -g gulp
+//npm install --save gulp
+//npm install --save bootstrap
+//npm install --save gulp-rename
+//npm install --save gulp-pleeease
+//npm install --save gulp-dart-scss
+//npm install --save gulp-processhtml
+
 
 
 
