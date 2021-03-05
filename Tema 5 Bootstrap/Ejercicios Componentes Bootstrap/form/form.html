@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Componente Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--link de css mio tienne que ir debajo del de bootstrap-->
+    <link rel="stylesheet" type="text/css" href="form.css"/>
+    </head>
+  <body>
+    <section class="hero d-flex justify-content-center align-items-center">
+      <h1 class="text-white display-3">Bootstrap 4</h1><!--display-4 cambia el tamaño de la letra-->
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/toriis.jpeg" width="30" height="30" class="d-inline-block align-top" alt="logo" loading="lazy">
+        <!--width y  height mejor en css, si queremos que salga centrado al aumentarle el tamaño, ponerle display flex al contenedor a-->
+        Bootstrap
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link nav-item py-3 px-3 py-lg-1 active" href="nav.html">Inicio <span class="sr-only">(current)</span></a>
+          <!--lo ponemos a partir de md porque antes se colapsa en el menu hanburguesa-->
+          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Nosotros</a>
+          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Servicios</a>
+          <a class="nav-link nav-item py-3 px-3 py-lg-1" href="#">Contacto</a>
+        </div>
+      </div>
+    </div>
+    </nav>
+
+    <section id="main">
+      <!--card-deck-->
+      <section class="container mt-5 pt-5"><!--el 5 es el maximo que tiene bootstrap-->
+      <div class="card-deck">
+        <div class="card">
+          <img src="img/1.jpeg" class="card-img-top" alt="G.E.M. Shapadora">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a><!--forma de ahorrar el crear un boton y dentro un enlace, es crear 
+              un enlace con la clase boton-->
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/10.png" class="card-img-top" alt="G.E.M. A.I.N.Y.">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-center">
+            <small class="text-muted">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/11.png" class="card-img-top" alt="G.E.M. Live">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted d-flex justify-content-center">
+              <a class="btn btn-primary" href="#" role="button">Saber más...</a>
+            </small>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--jumbotron-->
+      <section class="jumbotron mt-5">
+        <div class="container text-center">
+          <h1 class="display-4">"I HAVE THE HIGH GROUND!"</h1>
+          <p class="lead my-4">"You understimate my power!"</p>
+          <p class="lead">"Don't try it"</p>
+        </div>
+      </section>
+
+      <!--formulario vertical-->
+      <section class="row">
+      <form class="col-xl-6 offset-xl-3 col-md-8 ofset-md-2 col-10 offset-1 p-5">
+        <legend class="p-3 text-center">
+          <p>Contact us</p>
+        </legend>
+        <div class="form-group">
+          <label for="exampleInputName">Name</label>
+          <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Write your name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write your email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="Write your password">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Submit your comment (optional)"></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- formulario horizontal-->
+    <section class="container mt-5 m-sm-5">
+      <div class="row">
+        <form class="col-sm-6 p-2 p-lg-1">
+          
+          <div class="row form-group">
+            <legend class="col-12 p-3 text-center">
+              <p>Contact us</p>
+            </legend>
+          </div>
+          
+          <div class="form-group row">
+            <label for="name" class="col-md-2 offset-md-1 col-form-label">Nombre</label><!--la clase col-form-label centra la etiqueta label con su caja-->
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="name" placeholder="Write your name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-md-2 offset-md-1 col-form-label">Email</label>
+            <div class="col-md-8">
+              <input type="email" class="form-control" id="colFormLabel" placeholder="Write your email">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-primary">Send consult</button>
+          </div>
+        </form>
+
+        <div class="col-sm-6 d-flex justify-content-center">
+          <img id="imgFormularioHor" src="img/samu.jpg" alt="client support"/><!--class="img-fluid"-->
+        </div>
+
+      </div>
+    </section>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deleniti optio nam reprehenderit officiis rem quis ad voluptas ea cumque possimus necessitatibus molestias placeat quo sint incidunt animi dignissimos magnam!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta minus dolorem necessitatibus, temporibus nisi libero velit exercitationem quae quod amet accusamus magnam unde corporis tenetur repellendus deleniti praesentium repellat blanditiis?
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae aut quisquam similique earum debitis quae, laudantium omnis vel magnam! Excepturi reprehenderit nam neque quidem, voluptatibus odit officiis? Laudantium, atque excepturi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae commodi consectetur repellendus, incidunt repellat reprehenderit tempora veniam dolorum sint unde maiores quibusdam iusto dolore veritatis aut exercitationem optio velit saepe?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam esse dolores repudiandae aspernatur quo harum nemo unde. Vel distinctio perferendis ducimus maiores. Aliquam sed eligendi laudantium ipsa pariatur facere!
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam a ea cumque veritatis qui, ratione dignissimos odit dolorem quis minus alias? Rem cum nobis ab itaque blanditiis repudiandae voluptas nam!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempore cumque voluptate, animi minima odit cupiditate doloribus consequuntur at laudantium doloremque vero reiciendis magni sequi molestias blanditiis aliquid accusantium nulla!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut mollitia maxime deleniti quae quos suscipit placeat ut quibusdam cum sed eos error quia, incidunt accusamus vel reiciendis temporibus, ipsa voluptatum!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam corrupti vero iste rem sapiente corporis similique consequatur blanditiis odit quam, excepturi beatae veritatis tempora mollitia ducimus soluta minima vel omnis.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat doloremque temporibus nostrum hic, ducimus inventore, deserunt exercitationem ad ex eum minus amet praesentium est non omnis aliquid voluptatum impedit voluptas?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum sequi expedita deleniti repellendus necessitatibus fuga neque porro itaque aut. Doloribus doloremque cupiditate voluptate ex ea sapiente distinctio ipsum repellendus.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsum voluptas recusandae facere? Assumenda dolorem similique beatae ipsum, aliquam consequatur alias. Assumenda odit sapiente illum repellendus voluptas magnam recusandae tempora.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem atque in itaque qui laboriosam. Debitis dolore illum ducimus totam autem accusantium, in nisi facilis mollitia fugit nesciunt a ullam beatae.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, eius nobis culpa in quidem illo nemo qui inventore enim provident voluptate nostrum atque, corrupti quis ullam eum! Blanditiis, aliquid omnis?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore rem error quae ad asperiores quo eaque accusamus voluptatibus nihil corrupti quas temporibus laborum, nostrum officia iste, soluta tempore odio.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aut asperiores minus voluptatum quidem architecto mollitia cupiditate veniam, nulla molestiae, minima eos eligendi perferendis aperiam natus, iste molestias vitae dolores!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem recusandae voluptate vitae commodi ipsam tenetur magni officiis aperiam cumque repudiandae, totam animi hic rerum sint et ab maxime? Quaerat, est!
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate asperiores recusandae iste placeat tenetur voluptates unde nihil beatae adipisci fuga aperiam quod id, tempore architecto dolorum! Minima omnis voluptatum similique.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quasi obcaecati architecto esse sunt itaque totam distinctio exercitationem officia error facilis maiores eligendi, nihil eum suscipit laborum recusandae assumenda nostrum.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea repellendus eveniet eligendi consequatur officiis. Tempora, expedita fuga adipisci, dolorum culpa velit temporibus doloremque quisquam delectus quidem exercitationem rerum iure labore?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta iure reprehenderit commodi dolores numquam nemo ad. Consequuntur distinctio deserunt excepturi voluptatum maiores tenetur reprehenderit ad odio corporis autem! Cumque, quam?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita harum repellendus nihil sapiente cupiditate voluptates repudiandae neque molestias illum numquam omnis, eius, aliquid temporibus vitae sunt labore ut laborum at.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus accusantium ea quasi. Facilis architecto temporibus reiciendis, ad corrupti ut non similique eos quod perferendis, eveniet nihil exercitationem, vitae quas? A.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam qui, tenetur minus sed doloribus eum, quaerat id atque modi, dolorem commodi necessitatibus. Ea in dolor doloribus distinctio veritatis asperiores consequuntur.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quasi inventore! Officiis dolore, reprehenderit, numquam possimus itaque adipisci asperiores dicta fugit eum officia nemo libero incidunt quod voluptates voluptatum consequuntur?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum maxime aliquam praesentium nobis aperiam nulla fuga eos corrupti! Qui aliquid modi laboriosam, voluptate illo impedit expedita ullam culpa amet?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem repellendus atque fuga eos iusto inventore dolorem, dolore aspernatur nihil quam voluptate, veritatis, voluptates doloribus sed asperiores autem nesciunt! Iusto, illo!
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus quo beatae esse eaque cupiditate voluptatem incidunt sint odio doloremque deserunt. Esse totam tempore nostrum quod, vel praesentium nulla. Blanditiis, ad.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt alias nam asperiores vero? Reprehenderit necessitatibus odio, voluptates quo expedita minus natus sequi laudantium doloremque quaerat debitis voluptatibus amet ab cum.
+
+    </section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  </body>
+</html>

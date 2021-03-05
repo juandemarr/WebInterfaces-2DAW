@@ -1,0 +1,177 @@
+/*Valores generales*/
+:root{
+    --main-font:Verdana;
+    --alternative-font:sans-serif;
+    --font-size:16px;
+    --main-color:rgb(62,178,255);
+    --main-modal-color:rgba(62, 178, 255, 0.5);
+    --muted-color:rgba(62, 178, 255, 0.15);
+    --second-color:#050047;
+    --line-height:1.6;
+    --text-color:#333;
+    --bg-color:white;
+}
+html{
+    font-family:var(--main-font), var(--alternative-font);/*con coma separo las fuentes, en caso de no verse 
+    la primera se cargará la segunda*/
+    font-size:var(--font-size);
+    line-height:var(--line-height);
+    color:var(--text-color);
+    background-color:var(--bg-color);
+}
+body{/*aunque sea inherit, si es necesario ponerlo ya que bootstrap también los define aquí y 
+    así se sobreescriben con los nuestros*/
+    font-family:inherit;
+    font-size:inherit;
+    color:inherit;
+    background-color:inherit;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    position:relative;
+}
+
+/*Cambiar estilos bootstrap*/
+.nav-link{
+    color:var(--main-color);
+    font-size:1.05rem;
+}
+.nav-link:hover{
+    transition:.4s ease-out;
+    color:var(--bg-color);
+}
+.nav-item:hover{
+    background-color:var(--main-modal-color);
+}
+.navbar-dark .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /*lo copiamos de bootstrap y para modificar el color cambiamos stroke*/
+}
+.navbar-dark .navbar-toggler-icon:hover{
+    transition:.4s ease-out;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(62, 178, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.btn-primary{
+    background-color:var(--second-color);
+    border-color:var(--second-color);
+}
+
+.btn-primary:hover{
+    transition:.3s ease-out;
+    background-color:var(--main-color);
+    border-color:var(--main-color);
+}
+
+/*Jumbotron*/
+.jumbotron{
+    background-color:var(--muted-color);
+    font-family: 'Comfortaa', cursive;
+}
+
+/*Form*/
+form{
+    background-color:var(--main-modal-color);
+    border-radius:5px;
+}
+
+
+
+/*Estilos propios*/
+.hero{
+    background-image: url(img/lin5.jpg);
+    background-size:cover;
+    height:100vh;
+    background-position:center;
+}
+.hero h1{
+    position:relative;
+}
+.hero h1::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:110%;
+    background-color:var(--main-color);
+    opacity:.3;
+}
+
+.bg-dark{
+    background-color:var(--second-color) !important;/*esta variable se define arriba en :root
+    bootstrap lo usa de sass.
+    Ventaja: no hay que volver a repetir el valor*/
+}
+#imgFormularioHor{
+    object-fit:contain;
+    width:60%;
+    
+}
+
+/*media-queries*/
+
+/*dispositivos pequeños*/
+@media (min-width:576px){
+    .card-deck{
+        flex-direction:column;
+    }
+}
+
+/*tablets*/
+@media (min-width: 768px){
+     .card-deck{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}
+
+/*lg - desktop*/
+@media (min-width:992px){
+    .nav-item:hover{
+        background-color:transparent;
+    }
+/*para scrollSpy vertical*/
+    #miScrollSpy{
+        text-align:center;
+        position:fixed;
+        top:0;
+        left:0;
+        width:15vw;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+    }
+    #miScrollSpy .navbar-brand{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:auto;
+        margin-right:0;
+    }
+    #miScrollSpy .navbar-collapse{
+        display:flex;
+        align-items:flex-start;
+        flex-grow:0;
+        width:100%;
+        margin-bottom:auto;
+    }
+    #miScrollSpy .navbar-collapse .navbar-nav{
+        flex-direction:column;/*el display:flex ya lo tiene en bootstrap*/
+        width:100%;
+    }
+    #miScrollSpy .navbar-collapse .navbar-nav .nav-item{
+        display:block;
+    }
+    #miScrollSpy .navbar-collapse .navbar-nav .nav-item .nav-link{
+        display:block;
+    }
+    .principal{
+        width:75vw;
+        margin-left:15rem;
+    }
+/* fin de scrollspy*/
+}
+
+/*extra large*/
+@media (min-width:1200px){
+
+}
