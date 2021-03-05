@@ -1,16 +1,18 @@
 //Variables
 $gold:#a07023;
+$gold-hover:#e4b66c;
 $black:rgb(10, 10, 10);
 $orangered:darken(rgba(245, 65, 0, 0.9),7%);
 $orangered-hover:lighten(rgba(255, 68, 0, 0.931),37%);
 $notdark:#2e2e2e;
 $notblank:#f0f0f0;
-$darkred:#770000c9;
+$darkred:#660101;
 $darkred-hover:#7c3a3a4d;
 $purple:#aa21c2;
 $green:#7fd41d;
 $blue:#00196d;
-$grey:#d8d8d8;
+$grey:#CACACA;
+$white:#fff;
 
 $colors: () !default;
 $colors: map-merge(
@@ -26,79 +28,246 @@ $colors: map-merge(
     "purple":            $purple,
     "green":             $green,
     "blue":              $blue,
-    "grey":              $grey
+    "grey":              $grey,
+    "white":             $white
   ),
   $colors
 );
 
 
 $primary:       $gold;
-$secondary:     $black;
-/*$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;*/
+$secondary:     $darkred;
+$success:       $green;
+$info:          $orangered;
+$light:         $notblank;
+$dark:          $black;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (
     "primary":    $primary,
     "secondary":  $secondary,
-    /*"success":    $success,
+    "success":    $success,
     "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
     "light":      $light,
-    "dark":       $dark*/
+    "dark":       $dark
   ),
   $theme-colors
 );
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
+$body-bg:$notblank;
 
-.navbar-collapse {
-    flex-basis:0;
-    flex-grow: 0;
+@mixin hover() {
+  &:hover { @content; }
 }
-/* @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-    $min: breakpoint-min($name, lg);
-    @if $min {
-      @media (min-width: $min) {
-        @content;
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+//FUENTES
+
+$font-family-base: 'Josefin Sans', sans-serif;
+$font-family-tertiary:sans-serif;
+$font-family-secondary:'Montserrat', sans-serif;
+$font-size-base:1.1rem;
+$font-size-lg:$font-size-base * 1.3;
+$font-size-sm:$font-size-base * .8; 
+
+
+//BOTONES
+
+$input-btn-padding-y:.2rem;
+$input-btn-padding-x:1rem;
+
+.btn{
+  padding:1rem .5rem;
+  &:focus,&.focus{
+    box-shadow:none!important;
+  }
+}
+
+//NAVBAR
+
+$navbar-light-color:                $gold-hover!important;
+$navbar-light-hover-color:          $white!important;
+$navbar-light-active-color:         $gold-hover!important;
+$navbar-light-disabled-color:       $grey!important;
+
+
+.navbar{
+  padding:0!important;
+}
+
+.navbar-brand{
+  padding:.7rem!important;
+}
+
+.navbar-light .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(228, 182, 108)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+  
+}
+.navbar-light .navbar-toggler-icon:hover{
+  transition:.4s ease-out;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(228, 182, 108)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;
+}
+
+.nav-item{
+  padding:.4rem!important;
+  &:hover{
+    background-color:$gold;
+    color:$navbar-light-hover-color;
+    transition:.2s ease-out;
+  }
+}
+
+.navbar-nav{
+  margin-left: auto!important;
+}
+
+.navbar-collapse{
+  padding:0!important;
+}
+
+//DROPDOWN
+
+$dropdown-link-hover-bg: $darkred;
+$dropdown-link-hover-color: $white;
+
+.dropdown-item{
+  @include hover-focus() {
+    transition:.2s ease-out;
+  }
+}
+
+//CARDS
+
+$card-bg: $gold;
+$card-color:$white;
+$card-border-width:3px;
+
+.card{
+  &-title{
+    font-weight:bold;
+  }
+  &-text{
+    font-family:$font-family-secondary;
+    font-size:$font-size-sm;
+    letter-spacing:1.5px;
+    line-height: 1.5rem;
+  }
+}
+
+//MODAL
+
+$modal-header-padding-y:.7rem;
+$modal-header-padding-x:.7rem;
+$modal-content-bg:$notblank;
+
+.modal-header{
+  justify-content:center;
+  & .modal-title{
+    font-weight:bold;
+  }
+}
+
+.modal-body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  & img{
+    padding-bottom:.8rem;
+  }
+  & p{
+    margin-bottom:0;
+  }
+}
+
+.modal-footer{
+  padding:.7rem;
+}
+
+//JUMBOTRON
+
+$jumbotron-padding:1.5rem;
+$jumbotron-bg:$darkred-hover;
+
+.jumbotron{
+  & .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  & h1{
+    font-style:italic;
+    font-weight:bold;
+  }
+}
+
+//FORMULARIO
+
+@mixin response($breakpoint){
+  @if($breakpoint == xl){
+      @media(max-width:1200px){
+          @content;
       }
-    } @else {
-      @content;
-    }
   }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, lg);
-    $infix: breakpoint-infix($next, lg);
+  @if($breakpoint == lg){
+      @media(max-width:992px){
+          @content;
+      }
+  }
 
-   
-    @include media-breakpoint-up(lg) {
-        justify-content: space-between;
+  @if($breakpoint == md){
+      @media(max-width:768px){
+          @content;
+      }
+  }
+
+  @if($breakpoint == sm){
+      @media(max-width:576px){
+          @content;
+      }
+  }
+}
+
+form{
+  border:2px solid $orangered;
+  border-radius:5px;
+  width:40%;
+  padding:2rem;
+
+    @include response(lg){
+        width:50%;
     }
-} */
-
-.navbar-expand{
-    @media(min-width:992px){
-        justify-content: space-between!important;
+    @include response(md){
+        width:70%;
+    }    
+    @include response(sm){
+        width:100%;
     }
 }
+$input-btn-padding-y:.2rem;
+$input-btn-padding-x:.4rem;
+
+.form-control:focus, .form-control:active{
+  box-shadow:none!important;
+  border:1px solid $orangered!important;
+}
+
+
+//Cambio mixing/_buttons linea 17-27
+
 
 /*@import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";*/
 
 /* @import "../node_modules/bootstrap/scss/nav.scss";
-@import "../node_modules/bootstrap/scss/navbar.scss"; */
+@import "../node_modules/bootstrap/scss/navbar.scss"; 
+Faltaban más archivos para el navbar etc., así que lo importé todo*/
 @import "../node_modules/bootstrap/scss/bootstrap";

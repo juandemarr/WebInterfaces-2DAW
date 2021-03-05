@@ -27,6 +27,11 @@ function mover(){
     .pipe(dest("./proyectojuande/js"));
 }
 
+function moverImagen(){
+    return src("./images/*")
+    .pipe(dest("./proyectojuande/images"));
+}
+
 var options={
     overwrite:true
 }
@@ -44,4 +49,5 @@ exports.compilar=compilar;
 exports.min_rename=min_rename;
 exports.procesar_html=procesar_html;
 exports.mover=mover;
+exports.moverImagen=moverImagen;
 exports.default=parallel(compilar,min_rename,procesar_html);
